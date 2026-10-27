@@ -2,6 +2,8 @@
 
 用户问一个选址问题（City of Ithaca, NY），Agent 自己规划步骤：查分区/宗地 GIS、读规划 PDF、查洪水与公交、做确定性计算，最后给出带 [E#] 引用的回答，全程记录调用链、延迟与成本。
 
+在线展示：https://site-research-agent.pplx.app
+
 重点不在“跑通”，而在失败处理，见 [FAILURE_MODES.md](FAILURE_MODES.md)。
 
 - `agent/`：core（预算、计量、重试、故障注入）、tools（五态 ToolResult 与降级阶梯）、agent（规划 → 执行 → 证据 → 合成 → 护栏）
