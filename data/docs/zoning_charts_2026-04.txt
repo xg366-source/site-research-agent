@@ -1,0 +1,1116 @@
+      CITY OF ITHACA
+     ZONING CHARTS
+                                      APRIL 2026
+
+
+GENERAL NOTES:
+1.   Signs are permitted in all districts. See Chapter 272 Signs of the City of Ithaca Code.
+2.   See Chapter 160 Design Review of the City of Ithaca Code for information on required design review.
+3.   Parking and loading requirements for all districts are found in the final pages of this document.
+4.   There are additional districts and overlays in the City:
+
+District/Overlay                                     Regulations
+Planned Unit Development Overlay District            §325-12
+Gorge Protection                                     §325-16(D)
+Historic Districts                                   Chapter 228 Landmarks Preservation
+Adult Use Overlay Zone                               §325-29.1
+South Hill Overlay District                          §325-8(E)
+Street Level Active Use Overlay                      §325-8(D)(3)
+RESIDENTIAL DISTRICTS USE LIST
+                                                        Single Family
+                                                                              Two Family Residential           Multi Family Residential          Residential
+                                                         Residential
+                                                              R-1 1,2                   R-2 1,2                             R-3                                     Additional
+                                                                                                                                                    RU 3            Regulations
+                                                        R-1A       R-1B       R-2A       R-2B       R-2C        R-3A      R-3AA       R-3B
+                                  Primary Uses
+              One-family dwelling, detached 4            •              •       •          •          •          •          •           •             •
+ One-family dwelling, detached, zero lot line 4           -             -        -          -         SP         SP         SP          SP             -
+         One-family dwelling, semi-detached 4             -             -       •          •          •          •          •           •             •
+              One-family dwelling, attached 4             -             -        -          -         SP         •          •           •             •
+                          Two-family dwelling 4           -             -       •          •          •          •          •           •             •
+                     Multiple family dwelling 4           -             -        -          -          -         •          •           •            •5
+            Fraternity, sorority, or group house          -             -        -          -          -         •          •           •            •5
+                                        Dormitory         -             -        -          -          -         •           -          •            •5
+                     Church or related building          •              •       •          •          •          •          •           •             •
+                     Public park or playground           •              •       •          •          •          •          •           •             •
+                           Library or fire station       •              •       •          •          •          •          •           •             •
+                  Cemetery or related building           SP             SP      SP         SP         SP         SP         SP          SP            SP
+            Public utility structure except office       SP             SP      SP         SP         SP         SP         SP          SP            SP
+                  School and related buildings           SP             SP      SP         SP         SP         SP         SP          SP            SP          §325-10(C)(4)
+         Nursery school, child day care center            -             -       SP         SP         SP         •          •           •             SP
+                           Adult day care home            -             -       SP         SP         SP         •          •           •             •
+            Neighborhood commercial facility              -             -       SP         SP         SP         SP         SP          SP             -
+           Nursing, convalescent or rest home             -             -        -          -          -         •          •           •              -
+                          Hospital or sanitarium          -             -        -          -          -         SP         SP          SP             -
+                         Bed-and-breakfast inn            -             -        -          -          -         SP         SP          SP            SP          §325-10(C)(2)
+                                Accessory Uses
+                       Accessory Dwelling Unit           •              •       •          •          •          •          •           •
+                    Required off-street parking          •              •       •          •          •          •          •           •             •              §325-20
+                                  Private garage         •6         •6         •6         •6         •7          •          •           •             •
+           Structure for construction purposes 8         •              •       •          •          •          •          •           •             •
+                           Adult day care home           •              •       •          •          •          •          •           •             •
+
+        Tower for the receipt or transmission of
+                                                         SP             SP      SP         SP         SP         SP         SP          SP            SP          §325-9B(1)(j)
+  electronic signals or generation of electricity
+
+                              Home occupation            SP             SP      SP         SP         SP         SP         SP          SP            SP          §325-9B(1)(i)
+                  Neighborhood parking area               -             -        -          -          -         SP         SP          SP            SP             §325-20
+         Neighborhood or Community Garden                SP             SP      SP         SP         SP         SP         SP          SP            SP          §325-10(C)(3)
+NOTES:
+  (1)              In R-1 and R-2 Districts, minor dependent children in the care of a parent or relative shall be excluded in determining the number of unrelated occupants.
+  (2)              Properties in the South Hill Overlay District with a zoning designation of R-1 or R-2, see §325-8(E).
+  (3)              Properties less than 60,000 SF may only have one primary structure. Properties greater than 60,000 SF may have two primary uses, if approved by ILPC and Planning 		
+		                 Board. Properties with at least 90,000 SF can have as many as three primary uses if approved by ILPC and Planning Board.
+  (4)              See §325-3 for occupancy restrictions.
+  (5)              Restricted to one every 500 feet for new construction, measured from the edge of the property line.
+  (6)              For not more than three cars.
+  (7)              For not more than six cars per building.
+  (8)              Not to remain for over two years.
+RESIDENTIAL DISTRICTS BULK +
+DIMENSIONAL STANDARDS
+                                                               Single Family
+                                                                                                Two Family Residential                         Multi Family Residential             Residential
+                                                                Residential
+                                                                       R-1                                R-2                                           R-3 1
+                                                                                                                                                                                        RU
+                                                             R-1A             R-1B       R-2A          R-2B            R-2C             R-3A           R-3AA 2         R-3B
+                               Minimum Lot Size 3
+
+                   One-family dwelling, detached 10,000 sf                   6,000 sf   5,000 sf     3,000 sf       2,500 sf 4        5,000 sf         5,000 sf      3,000 sf       10,000 sf
+
+     One-family dwelling, detached, zero lot line               -               -           -             -         2,500 sf 4             -              -               -               -
+
+              One-family dwelling, semi-detached                -               -       5,000 sf     3,000 sf       2,000 sf 5        5,000 sf         5,000 sf      3,000 sf       15,000 sf
+
+    One-family dwelling, attached, by conversion                -               -           -             -         1,500 sf 6       7,000 sf 7       7,000 sf 7    4,000 sf 8     16,500 sf 9
+
+ One-family dwelling, attached, new construction                -               -           -             -         1,500 sf 6       6,000 sf 7       6,000 sf 7    3,500 sf 8     16,500 sf 9
+
+                                Two-family dwelling             -               -       5,000 sf     3,000 sf       2,000 sf 5        5,000 sf         5,000 sf      3,000 sf       15,000 sf
+
+           Multiple family dwelling, by conversion              -               -           -             -               -          7,000 sf 7       7,000 sf 7    4,000 sf 8     16,500 sf 9
+
+         Multiple family dwelling, new construction             -               -           -             -               -          6,000 sf 7       6,000 sf 7    3,500 sf 8     16,500 sf 9
+
+                Fraternity, sorority, or group house                                                                                 25,000 sf        25,000 sf     25,000 sf       30,000 sf
+
+                                            Other use 10,000 sf              7,500 sf   6,000 sf     4,000 sf        4,000 sf         6,000 sf        6,000 sf       4,000 sf       30,000 sf
+
+                              Minimum Lot Width
+
+                   One-family dwelling, detached             75 ft            50 ft      45 ft         35 ft           40 ft            40 ft           50 ft          30 ft           75 ft
+
+     One-family dwelling, detached, zero lot line               -               -           -             -            40 ft               -              -               -               -
+
+              One-family dwelling, semi-detached                -               -        45 ft         35 ft           50 ft            40 ft           50 ft          30 ft           100 ft
+
+                    One-family dwelling, attached               -               -           -             -            50 ft            50 ft           50 ft          40 ft           125 ft
+
+                                Two-family dwelling             -               -        45 ft         35 ft           50 ft            40 ft           50 ft          30 ft           100 ft
+
+                           Multiple family dwelling             -               -           -             -               -             50 ft           50 ft          40 ft           125 ft
+
+                Fraternity, sorority, or group house                                                                                    100 ft          50 ft         100 ft           125 ft
+
+                                            Other use        75 ft            60 ft      50 ft         40 ft           40 ft            50 ft           50 ft          40 ft           125 ft
+
+                   Maximum Building Height 10
+
+                                   Number of stories           3                3          3             3               3                4             3/2 11            4              3
+
+                                        Height in feet       35 ft            35 ft      35 ft         35 ft           35 ft            40 ft           35 ft          40 ft           35 ft
+
+           Maximum lot coverage by buildings
+
+                                                                                                                    35%/40%
+                                  Percent of lot area        20%              25%        30%           35%                              35%             35%            40%            25% 13
+                                                                                                                     /50% 12
+
+                                  Yard Dimensions
+
+                                     Front (minimum)         25 ft            25 ft      25 ft         10 ft           10 ft            10 ft           10 ft          10 ft           25 ft
+
+                           Side (one side minimum)           10 ft            10 ft      10 ft         10 ft      10 ft /15 ft 14       10 ft           10 ft          10 ft           10 ft
+
+                                                                                                                    0 ft /5 ft /
+                         Side (other side minimum)           10 ft            10 ft      10 ft          5 ft                             5 ft            5 ft           5 ft           10 ft
+                                                                                                                      10 ft 15
+
+                Rear (minimum, % of depth or feet,          25%/             25%/       25%/          25%/            25%/             20%/            25%/           20%/            25% /
+                                whichever is less)          50 ft 16         50 ft 16   50 ft 16      50 ft 16        50 ft 16         50 ft 16        50 ft 16       50 ft 16        50 ft 17
+
+NOTES:
+  (1)                For special conditions on development of property in R-3 that directly abuts R-1, see §325-9.
+  (2)                No new construction of a primary structure in the R-3aa zone shall contain a footprint that is larger than 120% of the average footprint of the existing buildings along the 		
+		                   entire block front in which the building is located. If one or more such surrounding buildings have been demolished, then the calculation for maximum building footprint 		
+		                   shall use the footprint of the primary structure that most recently stood on any lot where a demolition had occurred.
+  (3)                See §325-8(B)(1).
+  (4)                For the first occupant; +500 sf for each additional occupant. (Could remove notes 1 - 6, if a single standard is created for these uses.)
+  (5)                For the first occupant in each dwelling unit; +400 sf for each additional occupant in each dwelling unit.
+  (6)                For the first occupant in each dwelling unit; +300 sf for each additional occupant in each dwelling unit; +500 sf for each additional occupant in each dwelling unit in 		
+		                   excess of five occupants.
+  (7)                For the first 1-3 units; +750 sf for each additional unit; +500 sf per room let for profit.
+  (8)                For the first 1-3 units; +500 sf for each additional unit; +300 sf per room let for profit.
+  (9)                For the first 1-3 units; +1,500 sf for each additional unit.
+  (10)               See §325-16.
+  (11)               The first number refers to the maximum building stories allowed, the second number refers to the minimum building stories required.
+  (12)               The first number applies to one-family detached dwellings, one-family detached zero lot line dwellings, and other uses; the second number applies to one-family semi-		
+		                   detached dwelling and two-family dwellings; and the third number applies to one-family attached dwellings.
+  (13)               50% of the developable lot area, after the required setbacks have been calculated, must be retained as green space.
+  (14)               The first number applies to one-family detached dwellings, one-family semi-detached dwellings (unattached sides only), one-family attached dwelling (unattached sides 		
+		                   only), two-family dwellings, and other uses; the second number applies to one-family detached zero lot line dwellings.
+  (15)               The first number applies to one-family detached zero lot line dwellings and one-family semi-detached dwellings with attached sides; the second number applies to one-		
+		                   family detached dwellings, two-family dwellings, and other uses; and the third number applies to one-family detached zero-lot line dwellings on the side abutting a 		
+		                   non-zero lot line building or lot.
+  (16)               But not less than 20 ft.
+  (17)               But not less than 30 ft.
+COMMERCIAL DISTRICTS USE LIST
+                                                                      Restricted                                 Service
+                                                                                         General Business                    Central Business
+                                                                       Business                                  Business
+                                                                         B-1                   B-2                                CBD 1           Additional
+                                                                                                                B-4    B-5   CBD-50, -60, -85,    Regulations
+                                                                     B-1A    B-1B   B-2A      B-2C     B-2D
+                                                                                                                             -100, -120, -140
+                                                  Primary Uses
+                               One-family dwelling, detached          •       •      •         •        •       •      •            •
+                         One-family dwelling, semi-detached           •       •      •         •        •       •      •            •
+                                One-family dwelling, attached         •       •      •         •        •       •      •            •
+                                            Two-family dwelling       •       •      •         •        •       •      •            •
+                                       Multiple family dwelling       •       •      •         •        •       •      •            •
+                                                         Dormitory    •       •      •         •        •       •      •            •
+                                     Church or related building       •       •      •         •        •       •      •            •
+                                     Public park or playground        •       •      •         •        •       •      •            •
+                                           Library or fire station    •       •      •         •        •       •      •            •
+                                  Cemetery or related building        SP      SP     SP        SP       SP      SP     SP           SP
+                            Public utility structure except office    SP      SP     SP        SP       SP      SP     SP           SP
+                        Nursery school, child day care center         •       •      •         •        •       •      •            •
+                                          Adult day care facility     •       •      •         •        •       •      •            •
+                           Neighborhood commercial facility           SP      SP     SP        SP       SP      SP     SP           SP
+                           Nursing, convalescent or rest home         •       •      •         •        •       •      •            •
+                                          Hospital or sanitarium      SP      SP     SP        SP       SP      SP     SP           SP
+                                         Bed-and-breakfast inn        SP      SP     SP        SP       SP      SP     SP           SP           §325-10(C)(2)
+                                     Funeral home or mortuary         •       •      •         •        •       •      •            •
+                                 Business or professional office      •       •      •         •        •       •      •            •
+                                   Bank or monetary institution       •       •      •         •        •       •      •            •
+                                          Office of government        •       •      •         •        •       •      •            •
+                                  School and related buildings        •       •      •         •        •       •      •            •
+                     Retail store or service commercial facility      -        -     •         •        •       •      •            •
+                   Restaurant, fast food establishment, tavern        -        -     •         •            -   •      •            •
+                          Club, lodge, or private social center       -        -     •         •            -   •      •            •
+      Confectionery, millinery, dressmaking or other activities
+             involving light hand fabrication as well as sales        -        -     •         •        •       •      •            •
+
+  Theater, bowling alley, auditorium, or other similar place of
+                                                                      -        -     •         •            -   •      •            •
+                                              public assembly
+                                                     Hotel, motel     -        -     •         •            -   •      •            •              §325-22
+                                     Urban beverage producer          -        -     •         •            -   •      •            •
+                                                 Parking garage       -        -     -         •            -   •      •            •
+                                                Gasoline station      -        -     -          -           -   •      •             -            §325-15(F)
+                               Motor vehicle sales and service        -        -     -          -           -   •      •             -
+    Printing, heating, welding, air conditioning, plumbing, or
+                                                   similar shop       -        -     -          -           -   •      •             -
+
+                                             Redemption center        -        -     SP        SP       SP      SP     SP           SP
+                                               Accessory Uses
+                                       Accessory Dwelling Unit       •        •     •          •        •
+                                    Required off-street parking       •       •      •         •        •       •      •            •              §325-20
+                                                  Private garage      •       •      •         •        •       •      •            •
+                          Structure for construction purposes    2
+                                                                      •       •      •         •        •       •      •            •
+  Tower for the receipt or transmission of electronic signals or
+                                                                      SP      SP     SP        SP       SP      SP     SP           SP           §325-9B(1)(j)
+                                       generation of electricity
+                                              Home occupation         •       •      •         •        •       •      •            •
+                                  Neighborhood parking area           SP      SP     SP        SP       SP      SP     SP           SP             §325-20
+                  Employee, customer, or public parking area          •       •      •         •        •       •      •            •              §325-20
+                                             Redemption center        -        -     •         •        •       SP     SP           SP
+                       Neighborhood or Community Garden               SP      SP     SP        SP       SP      SP     SP           SP           §325-10(C)(3)
+NOTES:      (1)      See §325-8(D).
+            (2)      Not to remain for over two years.
+COMMERCIAL DISTRICTS BULK +
+DIMENSIONAL STANDARDS
+                                                            Restricted Business            General Business              Service Business                  Central Business
+
+                                                                       B-1                           B-2                                                          CBD 1
+                                                                                                                         B-4           B-5
+                                                             B-1A            B-1B          B-2A             B-2D                                     CBD-50, -60, -85, -100, -120, -140
+
+
+                                 Minimum Lot Size
+                   One-family dwelling, detached 5,000 sf                 5,000 sf       3,000 sf          3,000 sf   3,000 sf       3,000 sf                        -
+              One-family dwelling, semi-detached 5,000 sf                 5,000 sf       3,000 sf          3,000 sf   3,000 sf       3,000 sf                        -
+   One-family dwelling, attached, by conversion 7,000 sf 2 7,000 sf 2                    3,000 sf          3,000 sf   3,000 sf       3,000 sf                        -
+One-family dwelling, attached, new construction 6,000 sf 2 6,000 sf 2                    3,000 sf          3,000 sf   3,000 sf       3,000 sf                        -
+                                Two-family dwelling 5,000 sf              5,000 sf       3,000 sf          3,000 sf   3,000 sf       3,000 sf                        -
+           Multiple family dwelling, by conversion 7,000 sf 2 7,000 sf 2                 3,000 sf          3,000 sf   3,000 sf       3,000 sf                        -
+         Multiple family dwelling, new construction 6,000 sf 2 6,000 sf 2                3,000 sf          3,000 sf   3,000 sf       3,000 sf                        -
+                                                 Motel          -               -       20,000 sf          3,000 sf   3,000 sf       3,000 sf
+                                            Other use 5,000 sf            3,000 sf       3,000 sf          3,000 sf   3,000 sf       3,000 sf                        -
+                              Minimum Lot Width
+                                                 Motel        40 ft          30 ft         100 ft           40 ft        40 ft         40 ft                       10 ft
+                                            Other use         40 ft          30 ft         40 ft            40 ft        40 ft         40 ft                       10 ft
+                    Maximum Building Height 3
+                                  Number of stories             4              6             4                 -           4             4                          -4
+                                        Height in feet        40 ft          50 ft         40 ft            40 ft        40 ft         40 ft                   see note 5
+                    Minimum Building Height 3,6
+                                  Number of stories             2              2              -               2            -             -                           2
+                                        Height in feet          -            25 ft            -             25 ft          -             -                         25 ft
+          Maximum Lot Coverage by Buildings
+
+                                  Percent of lot area         50%            90%          50% 7             75%          50%           50%                       100% 8
+
+Yard Dimensions
+                                     Front (minimum)           5 ft           5 ft            -             10 ft          -           10 ft                         -
+                          Side (one side minimum)             10 ft           5 ft         10 ft            10 ft        10 ft         10 ft                         -
+                         Side (other side minimum)             5 ft           5 ft          5 ft             5 ft         5 ft          5 ft                         -
+                Rear (minimum, % of depth or feet,           15%/            10%/          15%/             15%/        15%/          15%/
+                                                                                                                                                                   10 ft
+                                whichever is less)           20 ft 9         15 ft 9       20 ft 9          20 ft 9     20 ft 9       20 ft 9
+NOTES:
+  (1)               See §325-8(D).
+  (2)               For the first 1-3 units; +750 sf for each additional unit; +500 sf per room let for profit.
+  (3)               See §325-16.
+  (4)               CBD-140 has a maximum building height of 12 stories.
+  (5)               Each of the CBD sub-districts have a maximum building height that corresponds with its suffix - for example CBD-50 has a maximum building height of 50 feet, CBD-100 		
+		                  has a maximum building height of 100 feet, etc.
+  (6)               Minimum building height requirement shall not apply to development, including additions and/or expansions of existing development where the new development or 		
+		                  addition or expansion of the existing development does not exceed a footprint of 500 square feet.
+  (7)               75% when adequate off-street parking is available within 500 ft, see §325-20.
+  (8)               Except as required for rear yard or side yard, as applicable.
+  (9)               But not less than 10 ft.
+SPECIAL PURPOSE DISTRICTS USE LIST
+                               Courthouse Special Use                   Additional                                                            Industrial               Additional
+                                                              C-SU 1                                                                                        I-1 7,8
+ Primary Uses                                                           Regulations        Primary Uses                                                                Regulations
+
+                      One-family dwelling, detached 2          •                                                          Church or related buildings        •
+                 One-family dwelling, semi-detached       2
+                                                               •                                                           Public park or playground         •
+                       One-family dwelling, attached 2         •                                                                  Library or fire station    •
+                                   Two-family dwelling    2
+                                                               •                                                     Cemetery and related buildings          SP
+                              Multiple family dwelling 2       •                                                   Public utility structure except office    SP
+                                               Dormitory       •                                               Nursery school, child day care center         •
+                            Church or related buildings        •                                                                Adult day care facility      •
+                             Public park or playground         •                                                  Neighborhood commercial facility           SP
+                                    Library or fire station    •                                                  Nursing, convalescent or rest home         •
+                       Cemetery and related buildings          SP                                                               Hospital or sanitarium       SP
+                     Public utility structure except office    SP                                                               Bed-and-breakfast inn        SP       §325-10(C)(2)
+                           School and related buildings        SP      §325-10(C)(4)                                        Funeral home or mortuary         •
+                 Nursery school, child day care center         •                                                       Business or professional office       •
+                                  Adult day care facility      •                                                          Bank or monetary institution       •
+                    Neighborhood commercial facility           SP                                                                Office of government        •
+                    Nursing, convalescent or rest home         •                                                         School and related buildings        •
+                                  Hospital or sanitarium       SP                                           Retail store or service commercial facility      •
+                                  Bed-and-breakfast inn        SP      §325-10(C)(2)                      Restaurant, fast food establishment, tavern        •
+                         Business or professional office       •3                                                Club, lodge, or private social center       •
+                                Medical or dental office       •                           Confectionery, millinery, dressmaking and other activities
+                                                                                                    involving light hand fabrication as well as sales        •
+ Accessory Uses
+                                                                                           Theater, bowling alley, auditorium, or other similar place
+                             Required off-street parking       •         §325-20                                                                             •
+                                                                                                                                  of public assembly
+                                          Private garage       •
+                                                                                                                                           Hotel, motel      •           §325-22
+                   Structure for construction purposes    4
+                                                               •
+                                                                                                                           Urban beverage producer           •
+      Tower for the receipt or transmission of electronic                                                                              Parking garage
+                                                               SP      §325-9B(1)(j)                                                                         •
+                     signals or generation of electricity
+                                                                                                                                      Gasoline station       •          §325-15(F)
+                                       Home occupation         •
+                                                                                                                     Motor vehicle sales and service         •
+                           Neighborhood parking area           SP        §325-20
+                                                                                            Printing, heating, welding, air conditioning, plumbing, or
+                Neighborhood or Community Garden               SP      §325-10(C)(3)                                                       similar shop      •
+
+                                                                                                                                    Redemption center        SP
+                                                                                                 Industrial, warehousing, wholesaling, storage, and
+                                                                                                                                                             •
+                              Residential Mobile Home                  Additional          handling of bulk goods 9, lumberyards, and agriculture 10
+                                                              MH-1
+ Primary Uses                                                          Regulations                           Transfer station for recyclable materials       •
+
+                                      Mobile home park         •                                                            Large beverage producer          •
+
+                     Mobile home displays and sales 5          •                                   Any use not permitted in any other zoning district       SP 11
+
+ Accessory Uses                                                                            Accessory Uses
+
+  Accessory uses and service buildings for residents of                                                                    Required off-street parking       •           §325-20
+                                                               •
+                             mobile home parks only                                                                                     Private garage       •
+                                                                                                                 Structure for construction purposes 4       •
+                                                                                            Tower for the receipt or transmission of electronic signals
+                                                University                                                                                                   SP        §325-9B(1)(j)
+                                                                        Additional                                         or generation of electricity
+                                                               U-1
+ Primary Uses                                                           Regulations
+                                                                                                                         Neighborhood parking area           SP          §325-20
+                Post secondary educational institution    6
+                                                                •                                       Employee, customer, or public parking area           •           §325-20
+ Accessory Uses                                                                                                                    Redemption Center         SP
+                              Required off-street parking       •        §325-20                              Neighborhood or Community Garden               SP       §325-10(C)(3)
+                                          Parking garage        •
+			
+
+                                                                                                                               Public and Institutional                Additional
+NOTES:
+  (1)  See Article VIII.                                                                                                                                    P-1 12
+  (2)  See §325-3 for occupancy requirements.                                              Primary Uses                                                                Regulations
+  (3)  Including architects, engineers, lawyers, realtors, accounts, planning, 		
+		     management, design, and finance consultants; and similar occupations                                                           Public recreation      •
+		     based on provision of written, verbal, or graphic materials to clients.
+                                                                                                                      Public or semi -public institution     •        §325-9(B)(1)(h)
+  (4)  Not to remain for over two years.
+  (5)  Except that no display shall take place within the confines of mobile home                      Municipal public building, facility, or function      •
+		parks.
+  (6)  Whose primary purpose is education, research, extension or living 		                Accessory Uses
+		accommodation.
+                                                                                             Accessory uses and service buildings for permitted uses         SP          §325-9
+  (7)  See §325-24.
+  (8)  Properties located within the I-1 District may also apply for a Planned Unit
+		     Development (See §325-12).
+  (9)  Does not include storage of rubbish as defined in §196.1.
+  (10) Except that no animals may be kept within 50 feet of any property line.
+  (11) In accordance with §325-9 and concurrence by the Common Council.
+  (12) Any use other than public recreation, classrooms, or living accommodations in
+		     P-1 Districts that are located within 200 feet of adjoining residential districts
+		     may be specially permitted.
+SPECIAL PURPOSE DISTRICTS BULK +
+DIMENSIONAL STANDARDS
+                                                                             Court House                                        Public and                                      Residential
+                                                                                                        Industrial                                       University
+                                                                             Special Use                                       Institutional                                   Mobile Home
+                                                                                  C-SU                      I-1                     P-1                      U-1                    MH-1
+ Minimum Lot Size
+
+                                 One-family dwelling, detached                  3,000 sf                      -                       -                        -                       -
+
+                          One-family dwelling, semi-detached                    3,000 sf                      -                       -                        -                       -
+
+              One-family dwelling, attached, by conversion                     4,000 sf 1                     -                       -                        -                       -
+
+           One-family dwelling, attached, new construction                     3,500 sf 1                     -                       -                        -                       -
+
+                                               Two-family dwelling              3,000 sf                      -                       -                        -                       -
+
+                       Multiple family dwelling, by conversion                 4,000 sf 1                     -                       -                        -                       -
+
+                   Multiple family dwelling, new construction                  3,500 sf 1                     -                       -                        -                       -
+
+                                                            Other use           4,000 sf                 5,000 sf                3,000 sf                      -                       -
+
+                                                Mobile Home Park                     -                        -                       -                        -                   5 acres
+
+                                                  Mobile Home Lot                    -                        -                       -                        -                  5,000 sf
+
+ Minimum Lot Width
+
+                                 One-family dwelling, detached                    30 ft                       -                       -                        -                       -
+
+                          One-family dwelling, semi-detached                      30 ft                       -                       -                        -                       -
+
+                                  One-family dwelling, attached                   40 ft                       -                       -                        -                       -
+
+                                               Two-family dwelling                30 ft                       -                       -                        -                       -
+
+                                          Multiple family dwelling                40 ft                       -                       -                        -                       -
+
+                                                            Other use             40 ft                    50 ft                    30 ft                      -                     50 ft
+
+ Maximum Building Height 2
+
+                                                  Number of stories                  2                       4                        -                        -                       4
+
+                                                       Height in feet             30 ft                    40 ft                      -                    175 ft 3                  40 ft
+
+ Minimum Building Height 2
+
+                                                  Number of stories                  -                      24                        -                        -                       -
+
+                                                       Height in feet                -                        -                       -                        -                       -
+
+ Maximum Lot Coverage by Buildings
+
+                                                 Percent of lot area              40%                      50%                      35%                     35%                      35%
+
+ Yard Dimensions
+
+                                                    Front (minimum)                10 ft                   20 ft                   25 ft 5                    -6                     10 1
+
+                                         Side (one side minimum)                   10 ft                   12 ft                   10 ft 5                     -                     10 ft
+
+                                       Side (other side minimum)                   5 ft                     6 ft                   10 ft 5                     -                      5 ft
+
+      Rear (minimum, % of depth or feet, whichever is less)                  20%/ 25 ft 7             15% / 20 ft 8                10 ft 5                     -               20%/ 25 ft 7
+NOTES:
+  (1) For mobile home parks, no mobile home lot shall be located within 50 feet of any existing public way, nor within 30 feet of any other existing property line.
+  (2) See §325-16.
+  (3) Except than within 200 feet of any adjacent City residential district, the maximum height of any building shall be limited to 15 feet more than the maximum height permitted in the 			
+		    adjacent City residential district. (Could be included as a text amendment and note could reference section instead).
+  (4) Only applies to new construction of non-industrial primary structures, or additions to an existing non-industrial primary use building in excess of 50% of the building area of the existing 		
+		building.
+  (5) Only when the yard is on a public street.
+  (6) Except as required by §325-18(C).
+  (7) But not less than 20 feet.
+  (8) But not less than 10 feet.
+WEST END DISTRICTS USE LIST & BULK +
+DIMENSIONAL REQUIREMENTS
+                                                                                         Additional   ACCESSORY USES
+PRIMARY USES                                           WEDZ-1a         WEDZ-1b
+                                                                                        Regulations
+                                                                                                                                                                                WEDZ-1a        WEDZ-1b
+                                                                                                                                            Required off-street parking              •                •
+             One-family dwelling, detached 1               •               •
+                                                                                                                                                          Private garage             •                •
+       One-family dwelling, semi-detached 1                •               •
+                                                                                                                                  Structure for construction purposes       1
+                                                                                                                                                                                     •                •
+              One-family dwelling, attached 1              •               •
+                                                                                                         Tower for the receipt or transmission of electronic signals or
+                          Two-family dwelling 1            •               •                                                                                                         SP               SP
+                                                                                                                                              generation of electricity
+                       Multiple family dwelling 1          •               •                                                                          Home occupation                •                •
+                                        Dormitory          •               •                                                              Neighborhood parking area                  SP               SP
+                     Church or related buildings           •               •                                              Employee, customer, or public parking area                 •                •
+                      Public park or playground            •               •                                                                        Redemption Center                SP               SP
+                            Library or fire station        •               •                                                   Neighborhood or Community Garden                      SP               SP
+              Cemetery and related buildings                SP             SP                                                                      Boat fuel dispensing              •                  -
+            Public utility structure except office          SP             SP                             Snowmobile sales, service, rental in conjunction with boat
+                                                                                                                                                                                     •                  -
+         Nursery school, child day care center             •               •                                                                 sales, rental, or service
+                          Adult day care facility          •               •                          NOTES:      (1)        Not to remain for over two years.
+            Neighborhood commercial facility                SP             SP
+           Nursing, convalescent or rest home              •               •
+                          Hospital or sanitarium            SP             SP
+                          Bed-and-breakfast inn             SP             SP         §325-10(C)(1)
+                      Funeral home or mortuary             •               •
+                Business or professional office            •               •                          BULK + DIMENSIONAL
+                    Bank or monetary institution           •               •                          REQUIREMENTS                                                 WEDZ-1a                  WEDZ-1b
+                           Office of government            •               •
+                                                                                                      Minimum Lot Size
+                    School and related buildings           •               •
+                                                                                                                                                      Motel        3,000 sf                 20,000 sf
+    Retail store or service commercial facility            •               •
+                                                                                                                                                  Other use        3,000 sf                  3,000 sf
+   Restaurant, fast food establishment, tavern             •               •
+                                                                                                      Minimum Lot Width
+          Club, lodge, or private social center            •               •
+                                                                                                                                                      Motel           30 ft                    100 ft
+       Confectionery, millinery, dressmaking
+                                                                                                                                                  Other use           30 ft                    40 ft 1
+      and other activities involving light hand            •               •
+                 fabrication as well as sales                                                         Maximum Building Height 2
+
+  Theater, bowling alley, auditorium, or other                                                                                           Number of stories             5                         2
+                                                           •               •
+             similar place of public assembly                                                                                                 Height in feet     12 ft / story   3
+                                                                                                                                                                                          12 ft / story 3,4
+                                     Hotel, motel          •               •             §325-22      Minimum Building Height 2
+                      Urban beverage producer              •               •                                                             Number of stories             2                         1
+                                 Parking garage            •                -                                                                 Height in feet          24 ft                     12 ft
+                                 Gasoline station          •                -           §325-15(F)    Maximum Lot Coverage by Buildings
+              Motor vehicle sales and service              •                -                                                           Percent of lot area      100%/90% 5,6             100%/90% 5,6
+  Printing, heating, welding, air conditioning,                                                       Yard Dimensions
+                                                           •                -
+                     plumbing, or similar shop
+                                                                                                                                           Front (minimum)              -                         -
+                              Redemption center             SP             SP
+                                                                                                                                          Front (maximum)               -                         -
+                                       Parking lot         •                -            §325-20
+                                                                                                                                 Side (one side minimum)                -                         -
+              Recreational or cultural facility 2          •                -                                                   Side (other side minimum)               -                         -
+                                            Boatel         •                -                                           Rear (minimum, % of depth or feet,
+                                                                                                                                                                      10 ft                    10 ft 7
+   Sales, rental, repairs or storage of marine                                                                                          whichever is less)
+        related recreational equipment such                                                           NOTES:
+                                                                                                        (1)                  Width in feet at waterfront is required to be 30 feet.
+                                                           •                -
+       as boats, marine engines, sail cabins                                                            (2)                  See §325-16.
+                                    equipment                                                           (3)                  Plus 5 feet for cornice.
+                                                                                                        (4)                  One story building must have added pitched roof or equivalent roof element.
+       Light manufacture of marine recreation                                                           (5)                  The first number applies to parcels 50 feet or less wide, the second number
+  related products involving substantial hand                                                         		                     applies to parcels 50 feet or greater wide.
+                                                           •                -
+    fabrication such as sails, boat hulls, cabin                                                        (6)                  Except as required for provision of curb setback(See Section 325-20G), and
+                                          fittings                                                    		                     required rear yard and required buffer where commercial zone abuts
+                                                                                                      		                     residential zone and required accommodation of pedestrian ways and
+                                Public recreation          •                -                         		                     protection of view corridors designated in the West End Urban Design
+                                                                                                      		                     Plan 1999. See Section 325-4.
+NOTES:        (1)         See §325-3 for occupancy requirements.                                        (7)                  See Flood Control Regulations.
+              (2)         Such as a park, playground, art museum, fishing pier, or yacht club.
+SOUTHWEST DISTRICTS USE LIST & BULK
++ DIMENSIONAL REQUIREMENTS
+                                                                                          Additional           ACCESSORY USES                                          SW-1 SW-2 SW-3
+PRIMARY USES                                          SW-1 SW-2 SW-3
+                                                                                         Regulations
+                                                                                                               Primary Uses
+         One-family dwelling, detached 1                •          •         •
+                                                                                                                            Required off-street parking                  •            •           •
+     One-family dwelling, semi-detached 1               •          •         •
+                                                                                                                                        Private garage                   •            •           •
+            One-family dwelling, attached 1             •          •         •
+                                                                                                                  Structure for construction purposes 1                  •            •           •
+                        Two-family dwelling 1           •          •         •
+                                                                                                                   Tower for the receipt or transmission
+                   Multiple family dwelling 1           •          •         •
+                                                                                                                  of electronic signals or generation of                 SP           SP          SP
+                                     Dormitory         •           •        •                                                                  electricity
+                 Church or related buildings           •           •        •                                                       Home occupation                      •            •           •
+                  Public park or playground            •           •        •                                              Neighborhood parking area                     SP           SP          SP
+                          Library or fire station      •           •        •
+                                                                                                                Employee, customer, or public parking
+            Cemetery and related buildings             SP          SP       SP                                                                                           •            •           •
+                                                                                                                                                area
+         Public utility structure except office        SP          SP       SP
+                                                                                                                                 Redemption Center                        -           SP           -
+     Nursery school, child day care center             •           •        •
+                                                                                                                 Neighborhood or Community Garden                        SP           SP          SP
+                        Adult day care facility        •           •        •
+                                                                                                               NOTES:     (1)       Not to remain for over two years.
+         Neighborhood commercial facility              SP          SP       SP
+        Nursing, convalescent or rest home             •           •        •
+                        Hospital or sanitarium         SP          SP       SP
+                       Bed-and-breakfast inn           SP          SP       SP        §325-10(C)(1)
+                  Funeral home or mortuary             •           •        •                                  BULK + DIMENSIONAL
+              Business or professional office          •2          •        •2                                 REQUIREMENTS    SW-1 1                                       SW-2 1          SW-3 1
+                     Medical or dental office          •           •        •                                  Minimum Lot Size
+                Bank or monetary institution           •           •        •
+                                                                                                                                        All uses 10,000 sf                 3,000 sf 3,000 sf
+                         Office of government          •           •        •
+                                                                                                               Minimum Lot Width
+               School and related buildings            •           •        •
+  Retail store or service commercial facility          •           •        •                                                           All uses              -                 -                 -
+ Restaurant, fast food establishment, tavern           •           •        •                                  Minimum Building Frontage
+      Club, lodge, or private social center            •           •        •                                      Percent of Street Frontage              60%                35%             35%
+     Confectionery, millinery, dressmaking                                                                     Maximum Building Height
+    and other activities involving light hand           •          •         •
+               fabrication as well as sales                                                                                Number of stories                  5                 5                 2
+
+     Theater, bowling alley, auditorium, or                                                                                       Height in feet           60 ft              60 ft           40 ft
+                                                        •          •         •
+     other similar place of public assembly                                                                    Maximum Lot Coverage by Buildings
+                               Hotel, motel             •          •         •            §325-22                          Percent of lot area             60%                60%             60%
+                Urban beverage producer                 •          •         •
+                                                                                                               Yard Dimensions
+                            Parking garage              •          •         •
+                                                                                                                                Front (minimum)               -               15 ft           15 ft
+                           Gasoline station             -          •         -          §325-15(F)
+            Motor vehicle sales and service             -          •         -                                              Front (maximum)                30 ft              34 ft           34 ft
+
+              Printing, heating, welding, air                                                                       Side (one side minimum)                   -                 -                 -
+                                                        •          •         •
+    conditioning, plumbing, or similar shop                                                                        Side (other side minimum)                  -                 -                 -
+                           Redemption center             -         SP         -
+         Light industrial and manufacturing 3           •          •         •                                    Rear (minimum, % of depth               15%/              15%/             15%/
+                                                                                                                    or feet, whichever is less)           20 ft 2           20 ft 2          20 ft 2
+            Recreational or cultural facility 4         •          •         •
+NOTES:
+  (1)                See §325-3 for occupancy requirements.                                                    NOTES:     (1)       See §325-29.2 for additional restrictions in this district.
+  (2)                Permitted if the office is minimum of 25,000 sf with a single tenant.                                (2)       But not less than 10 feet.
+  (3)                Including wholesaling, warehousing, storage and handling of bulk goods, lumberyards, 		
+		                   printing, heating, plumbing, welding, and air conditioning.
+  (4)                Such as a park, playground, art museum, fishing pier, or yacht club.
+WATERFRONT                                                                                                                                 West End
+                                                                                                                                                           Cherry
+                                                                                                                                                                       Newman Market               Additional
+
+DISTRICTS USE LIST
+                                                                                                                                                           Street
+                                                                                                                                           Waterfront                   District District          Regulations
+                                                                                                                                                           District
+                                                                                                                                            WE/WF            CSD          ND           MD
+Primary Uses
+                                                                                                           Multiple family dwelling 1           •             •2           •            •
+                                                                                                         Church or related buildings            •             •            •            •
+                                                                                                          Public park or playground             •             •            •            •
+                                                                                                                Library or fire station         •             •            •            •
+                                                                                                 Public utility structure except office         SP            SP            -            -
+                                                                                                       School and related buildings             •             •            •            •
+                                                                                             Nursery school, child day care center              •             •            •            •
+                                                                                                               Adult day care facility          •             •            •            •
+                                                                                                Neighborhood commercial facility                •             •            •            •
+                                                                                               Nursing, convalescent or rest home               •             •            •            •
+                                                                                                                 Health care facilities          -             -            -           •
+                                                                                                              Bed-and-breakfast inn             •             •            •            •        §325-10(C)(1)
+                                                                                                          Funeral home or mortuary              •             •            •            •
+                                                                                                     Business or professional office            •             •            •            •
+                                                                                                            Medical or dental office            •             •            •            •
+                                                                                                        Bank or monetary institution            •             •            •            •
+                                                                                                                Office of government            •             •            •            •
+                                                                                         Retail store or service commercial facility            •             •            •            •
+                                                                                        Restaurant, fast food establishment, tavern             •             •           •     3
+                                                                                                                                                                                       •3
+                                                                                              Club, lodge, or private social center             •             •            •            •
+                 Confectionery, millinery, dressmaking and other activities involving light hand fabrication as well as sales                   •             •             -           •
+                                                Theater, bowling alley, auditorium, or other similar place of public assembly                   •             •            •            •
+                                                                                                                          Hotel, motel          •             •            •            •               §325-22
+                                                                                                                      Parking garage            SP             -            -            -
+                                                                                                                   Redemption center            SP            SP            -            -
+                                                                                               Light industrial and manufacturing      4
+                                                                                                                                                 -            •             -            -
+                                                                                                          Urban beverage producer               •             •            •            •
+                                                                                                           Large beverage producer               -            •             -            -
+                                                                                                             Food production facility            -            •             -           •
+                                                                                                         Multi-level storage facilities          -            •5            -            -
+                                                                                                   Recreational or cultural facility   6
+                                                                                                                                                 -             -           •            •
+                                                                                                                                 Boatel          -             -           •            •
+    Sales, rental, repairs or storage of marine related recreational equipment such as boats, marine engines, sail cabins
+                                                                                                                                                •             •            •            •
+                                                                                                              equipment
+                                                              Water related light industrial uses, including boat fueling stations              •             •             -            -
+                                                                                                                  Community garden               -             -           •            •        §325-10(C)(3)
+Accessory Uses
+                                                                                                         Required off-street parking            •             •            •            •           §325-20
+                                                                                                                      Parking garage            •             •            •            •
+                                                                                                                       Private garage           •             •            •            •
+                                                                                               Structure for construction purposes     7
+                                                                                                                                                •             •            •            •
+                                        Tower for the receipt or transmission of electronic signals or generation of electricity                SP            SP           SP           SP        §325-9B(1)(j)
+                                                                                                                   Home occupation              •             •            •            •
+                                                                                                       Neighborhood parking area                SP            SP           SP           SP          §325-20
+                                                                                     Employee, customer, or public parking area                 •             •            •            •           §325-20
+                                                                                                                  Redemption Center             SP            SP           SP           SP
+                                                                                            Neighborhood or Community Garden                    SP            SP           SP           SP       §325-10(C)(3)
+                                                                                                                 Boat fuel dispensing           •             •            •            •
+                                          Snowmobile sales, service, rental in conjunction with boat sales, rental, or service                  •             •            •            •
+                                                                                                                            Parking lot         •             •            •            •           §325-20
+                                                                                                                                  Dock          •             •            •            •
+                                                                                                       Outdoor storage of materials             •             •            •            •
+                  Storage of marine related recreation equipment such as boats, marine engines, sails, cabin equipment                 8
+                                                                                                                                                •             •            •            •
+                 Confectionery, millinery, dressmaking and other activities involving light hand fabrication as well as sales                    -             -           •            •
+                                                                                                         Drive-thru banking services             -             -            -           •
+
+NOTES:     (1)         See §325-3 for occupancy requirements.
+           (2)         No residential uses permitted south of Cecil Malone Drive. Properties located north of Cecil Malone Drive, residential uses not permitted on the ground floor of any building.
+           (3)         With the exception of establishments where food or drink is intended to be served to or consumed by persons in automobiles.
+           (4)         Including wholesaling, warehousing, storage and handling of bulk goods, lumberyards, printing, heating, plumbing, welding, and air conditioning.
+           (5)         No ground floor storage is permitted.
+           (6)         Such as a park, playground, art museum, fishing pier, or yacht club.
+           (7)         Not to remain for over two years.
+           (8)         As it relates to permitted primary uses under zoning.
+WATERFRONT DISTRICTS BULK +
+DIMENSIONAL REQUIREMENTS
+                                                                                                                                            Cherry Street                 Newman                  Market
+                                                                                            West End Waterfront 1
+                                                                                                                                              District 1                  District 1              District 1
+                                                                                                     WE/WF                                     CSD                          ND                    MDI-1
+Minimum Lot Size
+                                                                      All uses                             -                                         -                          -                       -
+Minimum Lot Width
+                                                                      All uses                             -                                         -                          -                       -
+Minimum Building Frontage
+                                            Percent of Street Frontage                                   60%                                         -                          -                       -
+Maximum Building Height 2
+                                                       Number of stories                                   5                                       5                          5                       5
+                                                          Height in feet                                  63                                      63 ft                      63 ft                   63 ft
+Minimum Building Height 2
+                                                       Number of stories                                2 3,4,6                                   2 4,5,6                    2 4,6                   2 4,6
+                                                          Height in feet                                25 ft                                       -                        25 ft                   25 ft
+Maximum Lot Coverage by Buildings
+                                                       Percent of lot area                             100% 7                                    70% 7                     100% 7                  100% 7
+Minimum Lot Coverage by Green Space
+                                                       Percent of lot area                                 -                                      15%                           -                       -
+Yard Dimensions
+                                             Front (minimum)                                           15 8,9                                    15 9                        15 9             15 9
+                                   Side (one side minimum)                                            5 ft 10                                 10 ft 10                     5 ft 10          5 ft 10
+                                  Side (other side minimum)                                           5 ft 10                                 10 ft 10                     5 ft 10          5 ft 10
+         Rear (minimum, % of depth or feet, whichever is less)                                    10 ft / 20 ft 11                         10 ft / 25 ft 11            10 ft / 20 ft 11 10 ft / 20 ft 11
+NOTES:
+  (1)             See §325-8C for additional restrictions in this district.
+  (2)             See §325-16.
+  (3)             Only for non-water dependent uses.
+  (4)             The first story of any new structure must be 12 - 15 feet in height measured floor to floor. Each additional story must be 10 -12 feet in height, measured from floor to floor. Increases in 1st 		
+		                floor elevation, as required to comply with flood plain regulations, can be included in 1st story min. height, however, 1st floor can be no less than 10’-floor to floor.
+  (5)             Only for non-industrial uses.
+  (6)             Accessory structures of less than 250 SF may be1story.
+  (7)             Except for required setbacks.
+  (8)             Buildings may be set back no more than 10 feet from the sidewalk.
+  (9)             Measured from inside edge of sidewalk.
+  (10)            With the exception of townhouses and row houses, and any other structure that shares a party wall, so long as they do not exceed the maximum building length.
+  (11)            The first number applies to properties not located directly adjacent to the water, the second number applies to properties located along the waterfront - and the distanced is measured 		
+		                from the top of the bank.
+COLLEGETOWN DISTRICTS USE LIST
+                                                                                                           Collegetown Residential 1           Mixed Use 1
+                                                                                                                                                                  Additional
+                                                                                                                      CR                             MU
+                                                                                                                                                                  Regulations
+                                                                                            CR-1               CR-2        CR-3        CR-4   MU-1        MU-2
+Permitted Uses
+                                    One-family dwelling, detached 2                           •                 •           •          •       •           •
+                            One-family dwelling, semi-detached 2                                -               •           •          •       •           •
+                                     One-family dwelling, attached 2                            -                -          •          •       •           •
+                                                     Two-family dwelling 2                      -               •           •          •       •           •
+                                               Multiple family dwelling 2                       -                -          •          •       •           •
+                                              Church or related building                      •                 •           •          •       •           •
+                                              Public park or playground                       •                 •           •          •       •           •
+                                                      Library or fire station                 •                 •           •          •       •           •
+                            Nursery school, child day care center                               -               SP          •          •       •           •
+                                                    Adult day care facility                     -               SP          •          •       •           •
+                               Nursing, convalescent, or rest home                              -                -          •          •       •           •
+                                                    Bed-and-breakfast inn                       -                -          SP          SP     -           -     §325-10(C)(2)
+                                          Cemetery or related building                        SP                SP          SP          SP     •           •
+                                  Public utility structure except office                      SP                SP          SP          SP     •           •
+                                          School and related buildings                        SP                SP          SP          SP     •           •     §325-10(C)(4)
+                                 Neighborhood commercial facility                               -               SP          SP          SP     •           •
+                                                   Hospital or sanatorium                       -                -          SP          SP     •           •
+                                              Public park or playground                         -                -           -          -      •           •
+                                        Business or professional office                         -                -           -          -      •           •
+                                           Bank or monetary institution                         -                -           -          -      •           •
+                               Club, lodge, or private social center                            -                -           -          -      •           •
+         Confectionery, millinery, dressmaking or other activities
+                                                                                                -                -           -          -      •           •
+                involving light hand fabrication as well as sales
+                                              Funeral home or mortuary                          -                -           -          -      •           •
+                                                                    Hotel or Inn                -                -           -          -      •           •
+                                                     Office of government                       -                -           -          -      •           •
+                        Retail store or service commercial facility                             -                -           -          -      •           •
+                   Restaurant, fast food establishment, or tavern                               -                -           -          -      •           •
+   Theater, bowling alley, auditorium, or other similar place of
+                                                                                                -                -           -          -      •           •
+                                               public assembly
+                                                              Parking garage                    -                -           -          -      -           •
+Accessory Uses
+                                                Accessory Dwelling Unit                       •                 •           •
+                                             Required off-street parking                      •                 •           •          •       •           •       §325-20
+                                                               Private garage                 •3               •3          •4          •4     •4          •4
+                              Structures for construction purposes 5                          •                 •           •          •       •           •
+   Tower for the receipt or transmission of electronic signals or
+                                                                                              SP                SP          SP          SP     SP          SP    §325-9B(1)(j)
+                                        generation of electricity
+                                                      Adult day care home                     •                 •           •          •       •           •
+                                                         Home occupations                     •6               •6          •6          •6     •6          •6     §325-9B(1)(i)
+                                          Neighborhood parking area                             -                -          •          •       •           •      §325-20B
+                    Employee, customer, or public parking area                                  -                -          -           -      -           •       §325-20
+
+NOTES:      (1)     See Article IX for specific restrictions, guidelines and other district regulations.
+            (2)     See §325-3 for occupancy requirements.
+            (3)     For not more than three cars.
+            (4)     For not more than four cars.
+            (5)     Not to remain for over two years.
+            (6)     Special permit required in certain situations.
+COLLEGETOWN DISTRICTS BULK +
+DIMENSIONAL STANDARDS
+                                                                                                              Collegetown Residential                                   Mixed Use
+                                                                                                                             CR 1                                            MU 1
+                                                                                           CR-1                   CR-2                 CR-3          CR-4           MU-1             MU-2
+Minimum Lot Size
+                                                     One-family dwelling                 4,000 sf               4,000 sf             3,000 sf      3,000 sf        3,000 sf         2,500 sf
+                                                      Two-family dwelling                5,500 sf               5,500 sf             3,000 sf      3,000 sf        3,000 sf         2,500 sf
+                                                 Multiple family dwelling                5,500 sf               5,500 sf             3,500 sf      3,500 sf        3,500 sf         2,500 sf
+                                                                    Other use            5,500 sf               5,500 sf             3,500 sf      3,500 sf        3,500 sf         2,500 sf
+Minimum Lot Width
+                                  One-family or two-family dwelling                        45 ft                  45 ft                30 ft         30 ft           30 ft           25 ft
+                                                                    Other use              50 ft                  50 ft                40 ft         40 ft           40 ft           25 ft
+Maximum Building Height 2,3
+                                                                 Primary Use
+                                                         Number of stories                    3                      3                   3             4               7               8
+                                                                Height in feet               35                     35                  35            45              75              85
+                                                             Accessory Use
+                                                         Number of stories                    2                      2                   2             2               2               2
+                                                                Height in feet               20                     20                  20            20              20              20
+Minimum Building Height 2
+                                                                 Primary Use
+                                                         Number of stories                    2                      2                   2             2               3               4
+                                                                Height in feet               20                     20                  20            20              30              45
+Maximum Lot Coverage by Buildings
+                                                         Percent of lot area                 30                     35                  40            50              70              100
+Minimum Lot Coverage by Green Space
+                                                         Percent of lot area                 35                     35                  30            25              10               0
+Yard Dimensions
+                                                            Front (minimum)                 10 ft                 10 ft                10 ft         10 ft            5 ft            0 ft
+                                                           Front (maximum)                    -                      -                   -              -               -             2 ft
+                                                             Side (minimum)                 5 ft                   5 ft                 5 ft      0 ft / 5 ft 4   0 ft / 5 ft 4       0 ft
+           Rear (minimum, % of depth or feet, whichever is less)                      20% / 20 ft            20% / 20 ft            20% / 20 ft      10 ft           10 ft           10 ft
+
+NOTES:   (1)      See §325.-45 for form and activation requirements, and for additional setbacks for accessory structures.
+         (2)      See §325-16.
+         (3)      See §325-45.2(B).
+         (4)      The first number applies to row houses, the second number applies to all other structures.
+RESIDENTIAL DISTRICTS OFF -STREET
+PARKING + LOADING REQUIREMENTS
+                                                    Single Family Residential     Two Family Residential             Multi Family Residential                     Residential
+
+                                                               R-1                          R-2                                R-3
+                                                                                                                                                                     RU
+                                                      R-1A           R-1B         R-2A     R-2B     R-2C          R-3A        R-3AA        R-3B
+
+Minimum Parking Requirement 1
+
+                                      Residential
+   First three bed or sleeping rooms per dwelling
+                                                                                                           1 space per dwelling unit
+                                             unit
+    4-5 bed or sleeping rooms per dwelling unit                                                            2 spaces per dwelling unit
+
+          Each additional bed or sleeping room                                                                  + 1 space per room
+                                                                                                                 1 space                 1 space
+                                                                                                                  per 4                   per 4
+                                      Dormitory         -              -            -        -         -                         -                      1 space per 4 persons housed
+                                                                                                                 persons                 persons
+                                                                                                                 housed                  housed
+Minimum Loading Requirement
+
+                              Nonresidential use     Allowed by variance 2        Allowed by variance 2               Allowed by variance 2                 Allowed by variance 2
+
+              Neighborhood commercial facility                  -                       See §325-21                        See §325-21                                 -
+
+                Multiple dweling with 25 + units                -                            -                  1 space / 10,000 sf of floor space3   1 space / 10,000 sf of floor space3
+
+           Nursing home, hospital, or sanitarium                -                            -                               1 space                                   -
+
+NOTES:		 (1)             For all other uses see §325-20.
+		(2)                    See §325-21.
+		       (3)             Plus 1 space for each additional 15,000 sf of floor space or major fraction thereof.
+COMMERCIAL DISTRICTS OFF -STREET
+PARKING + LOADING REQUIREMENTS
+                                                                                                                                                                                        Central
+                                                 Restricted Business                               General Business                                     Service Business
+                                                                                                                                                                                        Business
+
+                                                            B-1                                            B-2
+                                                                                                                                                  B-4                       B-5          CBD
+                                                B-1A                 B-1B                 B-2A                          B-2D 1
+Minimum Parking Requirement (# spaces) 2
+
+                              Residential
+   First three bed or sleeping rooms per
+                                                  -                    -         1 space per dwelling unit                 -                        -                         -            -
+                            dwelling unit
+         4-5 bed or sleeping rooms per                                            2 spaces per dwelling
+                                                  -                    -                                                   -                        -                         -            -
+                          dwelling unit                                                    unit
+
+  Each additional bed or sleeping room            -                    -           + 1 space per room                      -                        -                         -            -
+
+                                                                                  1 space per 4 persons
+                               Dormitory          -                    -                                                   -                        -                         -            -
+                                                                                         housed
+
+                          Nonresidential
+
+                                                                                 1 space per 500 gross sf    1 space per 500 gross sf
+     Neighborhood commercial facility             -                    -                                                                            -                         -            -
+                                                                                      of floor area               of floor area
+
+                   Bed-and-breakfast inn          -                    -          1 space per bedroom            1 space per bedroom                -                         -            -
+
+  Hospital, nursing home, or similar use          -                    -            1space per 5 beds              1space per 5 beds                -                         -            -
+
+                           Funeral home           -                    -           1 space per 10 seats           1 space per 10 seats              -                         -            -
+
+                                                                                  1 space per 250 sf of          1 space per 250 sf of
+         Business or professional office          -                    -                                                                            -                         -            -
+                                                                                       office floor                   office floor
+
+                                                                                 1 space per 500 gross sf    1 space per 500 gross sf
+                              Retail store        -                    -                                                                            -                         -            -
+                                                                                       of floor area              of floor area
+                     Auditorium, theater          -                    -           1 space per 5 seats            1 space per 5 seats               -                         -            -
+                                                                                   1 space per 50 sf net          1 space per 50 sf net
+                   Bar, tavern, restaurant        -                    -          floor area in assembly         floor area in assembly             -                         -            -
+                                                                                           place                          place
+
+                             Hotel, motel         -                    -         1 space per guest room          1 space per guest room             -                         -            -
+
+                              Other Uses          -                    -              See §325-20                    See §325-20                    -                         -            -
+
+Minimum Loading Requirement
+
+                                               1 space /            1 space /                                                                                         1 space /
+                                                                                  1 space / 10,000 sf of         1 space / 10,000 sf of   1 space / 10,000 sf
+       Multiple dwelling with 25 + units     10,000 sf of         10,000 sf of                                                                                     10,000 sf of floor      -
+                                                                                       floor space3                   floor space3           of floor space3
+                                             floor space3         floor space3                                                                                         space3
+
+  Nursing home, hospital, or sanitarium        1 space              1 space              1 space                        1 space                 1 space                    1 space         -
+
+                          Office building      1 space              1 space              1 space                        1 space                 1 space                    1 space         -
+
+                                                                                                                                                                   1 space for each
+                                                                                   1 space for each use           1 space for each use    1 space for each use
+                                                                                                                                                                   use with 3,000 -
+                              Retail store        -                    -         with 3,000 - 10,000 sf of       with 3,000 - 10,000 sf   with 3,000 - 10,000                              -
+                                                                                                                                                                   10,000 sf of floor
+                                                                                        floor space3                 of floor space3        sf of floor space3
+                                                                                                                                                                        space3
+
+                               Other use     See §325-21         See §325-21          See §325-21                    See §325-21              See §325-21            See §325-21           -
+
+Maximum Loading Requirement
+
+                                                                                  4 spaces / any single          4 spaces / any single    4 spaces / any single     4 spaces / any
+                                                             -                                                                                                                             -
+                                                                                       occupancy                      occupancy                occupancy           single occupancy
+
+NOTES:       (1)       Where a building with 60% or more of the gross square footage is devoted to a residential use, no off-street parking shall be required.
+             (2)       For all other uses see §325-20.
+             (3)       Plus 1 space for each additional 15,000 sf of floor space or major fraction thereof.
+SPECIAL PURPOSE DISTRICTS OFF -STREET
+PARKING + LOADING REQUIREMENTS
+                                                                                                                          Public and                    Residential
+                                                     Court House Special Use                        Industrial                            University
+                                                                                                                         Institutional                 Mobile Home
+                                                                 C-SU                                    I-1                  P-1           U-1 1          MH-1
+Minimum Parking Requirement (# spaces)
+                                   Residential
+      First three bed or sleeping rooms per
+                                                     1 space per dwelling unit            1 space per dwelling unit            -              -               -
+                               dwelling unit
+   4-5 bed or sleeping rooms per dwelling                                                   2 spaces per dwelling
+                                                    2 spaces per dwelling unit                                                 -              -               -
+                                        unit                                                         unit
+     Each additional bed or sleeping room               + 1 space per room                   + 1 space per room                -              -               -
+
+                          Home occupation                           1                                    1                     -              -               -
+
+                   Multiple family dwelling          1 space per dwelling unit            1 space per dwelling unit            -              -               -
+                                                       1 space per 4 persons               1 space per 4 persons
+                                    Dormitory                                                                                  -              -               -
+                                                              housed                              housed
+                               Mobile homes                          -                                    -                    -              -        2 spaces per lot
+                              Nonresidential
+                                                    1 space per 500 gross sf of 1 space per 500 gross sf
+         Neighborhood commercial facility                                                                                      -              -               -
+                                                            floor area               of floor area
+                     Bed-and-breakfast inn             1 space per bedroom                  1 space per bedroom                -              -               -
+
+     Hospital, nursing home, or similar use              1 space per 5 beds                  1 space per 5 beds                -              -               -
+                                              1 space per 500 SF of                         1 space per 250 sf of
+                          Professional office                                                                                  -              -               -
+                                                   office space                                  office floor
+                                            1 space per 250 sf of floor
+                   Medical or dental office                                                               -                    -              -               -
+                                                       space
+                                Funeral home                         -                      1 space per 10 seats               -              -               -
+                                                                                          1 space per 500 gross sf
+                                   Retail store                      -                                                         -              -               -
+                                                                                               of floor area
+                         Auditorium, theater                         -                       1 space per 5 seats               -              -               -
+                                                                                             1 space per 50 sf net
+                     Bar, tavern, restaurant                         -                      floor area in assembly             -              -               -
+                                                                                                     place
+                                 Hotel , motel                       -                     1 space per guest room              -              -               -
+                                                                                                                       1 space per 10
+                            Public recreation                        -                                    -            persons viewing        -               -
+                                                                                                                       or participating
+                                   Other uses                                                                  See § 325-20
+
+Minimum Loading Requirement
+                                                                                           1 space / 10,000 sf of
+          Multiple dwelling with 25 + units                          -                                                         -              -               -
+                                                                                                floor space 2
+     Nursing home, hospital, or sanitarium                           -                               1 space                   -              -               -
+
+                              Office building                        -                               1 space                   -              -               -
+                                                                                           1 space for each use
+                                   Retail store                      -                   with 3,000 - 10,000 sf of             -              -               -
+                                                                                                floor space 2
+                                                                                           1 space for each use
+                                Industrial Use                       -                   with 3,000 - 10,000 sf of             -              -               -
+                                                                                                floor space 2
+                                     Other use                       -                           See §325-21            See §325-21 3         -               -
+
+Maximum Loading Requirement
+
+                                                                                            4 spaces / any single
+                                                                     -                                                         -              -               -
+                                                                                                 occupancy
+NOTES:    (1)     See § 325-20(J).
+          (2)     Plus 1 space for each additional 15,000 sf of floor space or major fraction thereof.
+          (3)     Subject to § 325-9.
+AREA BASED DISTRICTS OFF -STREET
+PARKING + LOADING REQUIREMENTS
+                                                                                                                                                         Cherry
+                                                                                                                                      West End                      Newman          Market
+                                                                West End Zone                             Southwest                                      Street
+                                                                                                                                      Waterfront                     District       District
+                                                                                                                                                         District
+                                                                   WEDZ                                      SW
+                                                                                                                                      WE/WF               CSD            ND          MD
+                                                       WEDZ-1a           WEDZ-1b              SW-1           SW-2           SW-3
+
+Minimum Parking Requirement (# spaces)
+
+                                        Residential
+
+First three bed or sleeping rooms per dwelling unit         -                           1 space per dwelling unit                          -                -            -             -
+
+     4-5 bed or sleeping rooms per dwelling unit            -                           2 space per dwelling unit                          -                -            -             -
+
+            Each additional bed or sleeping room            -                                + 1 space per room                            -                -            -             -
+
+                                Home occupation             -                                      1 space                                 -                -            -             -
+
+                          Multiple family dwelling          -                           1 space per dwelling unit                          -                -            -             -
+
+                                        Dormitory           -                        1 space per 4 persons housed                          -                -            -             -
+
+                                   Nonresidential
+
+               Neighborhood commercial facility             -                     1 space per 500 gross sf of floor area                   -                -            -             -
+
+                            Bed-and-breakfast inn           -                               1 space per bedroom                            -                -            -             -
+
+            Hospital, nursing home, or similar use          -                                1 space per 5 beds                            -                -            -             -
+
+                                     Funeral home           -                                1 space per 10 seats                          -                -            -             -
+
+                    Business or professional office         -                       1 space per 250 sf of office floor                     -                -            -             -
+
+                                       Retail store         -                     1 space per 500 gross sf of floor area                   -                -            -             -
+
+                               Auditorium, theater          -                                1 space per 5 seats                           -                -            -             -
+
+                            Bar, tavern, restaurant         -               1 space per 50 sf net floor area in assembly place             -                -            -             -
+
+                                      Hotel, motel          -                               1 space per guest room                         -                -            -             -
+
+                                       Other Uses           -                                   See §325-20                                -                -            -             -
+
+Minimum Loading Requirement
+
+                  Multiple dwelling with 25 + units         -                      1 space / 10,000 sf of floor space1                                                   -             -
+
+            Nursing home, hospital, or sanitarium           -                                      1 space                              1 space, unless an on            -             -
+                                                                                                                                       street loading space is
+                                   Office building          -                                      1 space                                                               -             -
+                                                                                                                                     already provided for in the
+                                       Retail store         -          1 space for each use with 3,000 - 10,000 sf of floor space1       public right of way             -             -
+
+                                         Other use          -                                   See §325-21                                                              -             -
+
+Maximum Loading Requirement
+
+                                                            -                       4 spaces / any single occupancy                        -                -            -             -
+
+NOTES:      (1)       Plus 1 space for each additional 15,000 sf of floor space or major fraction thereof.
+
+
+
+
+COLLEGETOWN DISTRICTS OFF -STREET
+PARKING + LOADING REQUIREMENTS
+                                                                                                             Collegetown Residential                                            Mixed Use
+                                                                                                                           CR                                                        MU
+                                                                                     CR-1                            CR-2                       CR-3                CR-41 MU-1 MU-2
+Minimum Parking Requirement (# of parking spaces)
+                                                          Residential
+          First three bed or sleeping rooms per dwelling unit                      1 space                          1 space                    1 space               -          -              -
+                  4-5 bed or sleeping rooms per dwelling unit                      2 space                          2 space                    2 space               -          -              -
+                         Each additional bed or sleeping room                      1 space                          1 space                    1 space               -          -              -
+                                                 Home occupation                   1 space                          1 space                    1 space               -          -              -
+                                                            Other use See § 325-20D(3)(b) See § 325-20D(3)(b) See § 325-20D(3)(b)                                    -          -              -
+Minimum Loading Requirement
+                                                                All usees               -                              -                          -                  -          -              -
+NOTES: (1)            Applies only to all buildings that comply with NYS building or residential code for new construction and have a transportation demand management plan that is accepted
+		                    by the Planning and Development Board during site plan review.
+

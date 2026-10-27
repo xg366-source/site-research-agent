@@ -1,0 +1,762 @@
+[
+ {
+  "tag": "N1_commons_6story",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "识别 60 ft 高度上限",
+    "pass": true
+   },
+   {
+    "name": "提及历史街区审查",
+    "pass": true
+   },
+   {
+    "name": "提及街道层活跃用途叠加区",
+    "pass": true
+   },
+   {
+    "name": "不给出无条件“可行”",
+    "pass": true
+   }
+  ],
+  "passed": 6,
+  "total": 6,
+  "fms": [
+   "FM-08",
+   "FM-12",
+   "FM-13",
+   "FM-14"
+  ],
+  "usd": 0.037266,
+  "wall_ms": 20807,
+  "http_calls": 10,
+  "tokens_in": 2347,
+  "tokens_out": 2291,
+  "wasted_ms": 0,
+  "n_spans": 12
+ },
+ {
+  "tag": "N2_collegetown_8story",
+  "question": "113 Dryden Rd, Ithaca 能不能建一栋 8 层学生公寓？公交怎么样？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "空间吸附失败后走属性反查",
+    "pass": true
+   },
+   {
+    "name": "识别 MU-2",
+    "pass": true
+   },
+   {
+    "name": "给出公交证据",
+    "pass": true
+   }
+  ],
+  "passed": 5,
+  "total": 5,
+  "fms": [
+   "FM-08",
+   "FM-14",
+   "FM-21"
+  ],
+  "usd": 0.032823,
+  "wall_ms": 16918,
+  "http_calls": 11,
+  "tokens_in": 2095,
+  "tokens_out": 2018,
+  "wasted_ms": 0,
+  "n_spans": 15
+ },
+ {
+  "tag": "N3_split_zoned",
+  "question": "202 E Seneca St, Ithaca 适合做办公楼吗？最高能建多高？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.6,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "检测到跨分区宗地 (FM-12)",
+    "pass": true
+   },
+   {
+    "name": "对两个分区分别解析规则",
+    "pass": true
+   },
+   {
+    "name": "同时提及 CBD-85 与 CBD-100",
+    "pass": true
+   }
+  ],
+  "passed": 5,
+  "total": 5,
+  "fms": [
+   "FM-08",
+   "FM-12",
+   "FM-13",
+   "FM-14",
+   "FM-21"
+  ],
+  "usd": 0.039776,
+  "wall_ms": 20335,
+  "http_calls": 10,
+  "tokens_in": 2654,
+  "tokens_out": 2340,
+  "wasted_ms": 0,
+  "n_spans": 14
+ },
+ {
+  "tag": "N4_out_of_jurisdiction",
+  "question": "1 Judd Falls Rd, Ithaca 可以开餐厅吗？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "无法判断",
+  "confidence": 0.5,
+  "checks": [
+   {
+    "name": "识别超出辖区 (FM-10)",
+    "pass": true
+   },
+   {
+    "name": "不调用 City 分区规则",
+    "pass": true
+   },
+   {
+    "name": "结论为无法判断/需澄清",
+    "pass": true
+   }
+  ],
+  "passed": 3,
+  "total": 3,
+  "fms": [
+   "FM-10"
+  ],
+  "usd": 0.011858,
+  "wall_ms": 9273,
+  "http_calls": 2,
+  "tokens_in": 1154,
+  "tokens_out": 766,
+  "wasted_ms": 0,
+  "n_spans": 7
+ },
+ {
+  "tag": "N5_nonexistent_address",
+  "question": "999 Fakename St, Ithaca 能开零售店吗？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "无法判断",
+  "confidence": 0.0,
+  "checks": [
+   {
+    "name": "地理编码为空时停止 (FM-09)",
+    "pass": true
+   },
+   {
+    "name": "不编造分区",
+    "pass": true
+   },
+   {
+    "name": "结论为无法判断/需澄清",
+    "pass": true
+   }
+  ],
+  "passed": 3,
+  "total": 3,
+  "fms": [
+   "FM-09"
+  ],
+  "usd": 0.009563,
+  "wall_ms": 6231,
+  "http_calls": 2,
+  "tokens_in": 1008,
+  "tokens_out": 641,
+  "wasted_ms": 163,
+  "n_spans": 5
+ },
+ {
+  "tag": "N6_unmatched_parcel",
+  "question": "130 E Clinton St, Ithaca 开咖啡馆可以吗？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "无法判断",
+  "confidence": 0.0,
+  "checks": [
+   {
+    "name": "宗地无法确认时触发位置闸门",
+    "pass": true
+   },
+   {
+    "name": "不输出分区结论",
+    "pass": true
+   },
+   {
+    "name": "结论为无法判断/需澄清",
+    "pass": true
+   }
+  ],
+  "passed": 3,
+  "total": 3,
+  "fms": [
+   "FM-08",
+   "FM-09",
+   "FM-21"
+  ],
+  "usd": 0.014066,
+  "wall_ms": 8510,
+  "http_calls": 7,
+  "tokens_in": 1266,
+  "tokens_out": 904,
+  "wasted_ms": 113,
+  "n_spans": 10
+ },
+ {
+  "tag": "N7_vague_question",
+  "question": "Ithaca Commons 附近哪里适合开一家独立书店？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "需要澄清",
+  "confidence": null,
+  "checks": [
+   {
+    "name": "缺地址时先澄清 (FM-19)",
+    "pass": true
+   },
+   {
+    "name": "不调用 GIS 工具",
+    "pass": true
+   }
+  ],
+  "passed": 2,
+  "total": 2,
+  "fms": [
+   "FM-19"
+  ],
+  "usd": 0.002773,
+  "wall_ms": 4285,
+  "http_calls": 0,
+  "tokens_in": 553,
+  "tokens_out": 444,
+  "wasted_ms": 0,
+  "n_spans": 3
+ },
+ {
+  "tag": "F1_flood_timeout",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {
+   "flood": "timeout",
+   "flood_mirror": "timeout"
+  },
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "洪水标为未核实",
+    "pass": true
+   },
+   {
+    "name": "回答中提示洪水待核实",
+    "pass": true
+   }
+  ],
+  "passed": 4,
+  "total": 4,
+  "fms": [
+   "FM-02",
+   "FM-08",
+   "FM-13",
+   "FM-14",
+   "FM-21"
+  ],
+  "usd": 0.03912,
+  "wall_ms": 25733,
+  "http_calls": 13,
+  "tokens_in": 2360,
+  "tokens_out": 2422,
+  "wasted_ms": 4601,
+  "n_spans": 13
+ },
+ {
+  "tag": "F2_geocoders_rate_limited",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {
+   "geocode": "http_429",
+   "geocode_fallback": "http_429"
+  },
+  "budget": null,
+  "use_llm": true,
+  "verdict": "无法判断",
+  "confidence": 0.0,
+  "checks": [
+   {
+    "name": "两级地理编码失败后停止",
+    "pass": true
+   },
+   {
+    "name": "结论为无法判断",
+    "pass": true
+   }
+  ],
+  "passed": 2,
+  "total": 2,
+  "fms": [
+   "FM-03",
+   "FM-09"
+  ],
+  "usd": 0.012687,
+  "wall_ms": 10488,
+  "http_calls": 3,
+  "tokens_in": 1069,
+  "tokens_out": 908,
+  "wasted_ms": 2000,
+  "n_spans": 5
+ },
+ {
+  "tag": "F3_pdf_misaligned",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {
+   "docs": "misaligned"
+  },
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.6,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "检测到列错位 (FM-13)",
+    "pass": true
+   },
+   {
+    "name": "不采用错位数值算体量",
+    "pass": true
+   }
+  ],
+  "passed": 4,
+  "total": 4,
+  "fms": [
+   "FM-08",
+   "FM-12",
+   "FM-13",
+   "FM-14",
+   "FM-21"
+  ],
+  "usd": 0.038676,
+  "wall_ms": 19515,
+  "http_calls": 10,
+  "tokens_in": 2412,
+  "tokens_out": 2378,
+  "wasted_ms": 0,
+  "n_spans": 13
+ },
+ {
+  "tag": "F4_zoning_empty",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {
+   "zoning": "empty"
+  },
+  "budget": null,
+  "use_llm": true,
+  "verdict": "无法判断",
+  "confidence": 0.0,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "分区为空时置信度上限 < 0.5",
+    "pass": true
+   },
+   {
+    "name": "不给出可行/不可行定论",
+    "pass": true
+   }
+  ],
+  "passed": 4,
+  "total": 4,
+  "fms": [
+   "FM-01",
+   "FM-08",
+   "FM-12",
+   "FM-14"
+  ],
+  "usd": 0.030013,
+  "wall_ms": 17797,
+  "http_calls": 10,
+  "tokens_in": 1706,
+  "tokens_out": 1953,
+  "wasted_ms": 121,
+  "n_spans": 11
+ },
+ {
+  "tag": "F5_planner_invalid_json",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {
+   "planner": "invalid_json"
+  },
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "计划解析失败 → 模板计划 (FM-16)",
+    "pass": true
+   },
+   {
+    "name": "仍完成调研",
+    "pass": true
+   }
+  ],
+  "passed": 4,
+  "total": 4,
+  "fms": [
+   "FM-08",
+   "FM-12",
+   "FM-13",
+   "FM-14",
+   "FM-16",
+   "FM-21"
+  ],
+  "usd": 0.043508,
+  "wall_ms": 22130,
+  "http_calls": 10,
+  "tokens_in": 2361,
+  "tokens_out": 2695,
+  "wasted_ms": 0,
+  "n_spans": 13
+ },
+ {
+  "tag": "F6_synth_hallucination",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {
+   "synth": "hallucinate"
+  },
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "护栏抓到伪造引用/数字 (FM-17)",
+    "pass": true
+   },
+   {
+    "name": "最终回答不含 E99",
+    "pass": true
+   }
+  ],
+  "passed": 4,
+  "total": 4,
+  "fms": [
+   "FM-08",
+   "FM-12",
+   "FM-13",
+   "FM-14",
+   "FM-17",
+   "FM-21"
+  ],
+  "usd": 0.077849,
+  "wall_ms": 37305,
+  "http_calls": 10,
+  "tokens_in": 4293,
+  "tokens_out": 4588,
+  "wasted_ms": 0,
+  "n_spans": 16
+ },
+ {
+  "tag": "F7_budget_breaker",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {},
+  "budget": {
+   "max_usd": 0.002,
+   "max_tool_calls": 30,
+   "max_wall_s": 120
+  },
+  "use_llm": true,
+  "verdict": "无法判断",
+  "confidence": null,
+  "checks": [
+   {
+    "name": "触发预算熔断 (FM-20)",
+    "pass": true
+   },
+   {
+    "name": "实际花费不超过上限",
+    "pass": true
+   }
+  ],
+  "passed": 2,
+  "total": 2,
+  "fms": [
+   "FM-20"
+  ],
+  "usd": 0.0,
+  "wall_ms": 0,
+  "http_calls": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "wasted_ms": 0,
+  "n_spans": 2
+ },
+ {
+  "tag": "F8_gtfs_stale",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {
+   "transit": "stale"
+  },
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   },
+   {
+    "name": "检测到公交数据过期 (FM-22)",
+    "pass": false
+   }
+  ],
+  "passed": 2,
+  "total": 3,
+  "fms": [
+   "FM-01",
+   "FM-02",
+   "FM-04",
+   "FM-08",
+   "FM-13",
+   "FM-14",
+   "FM-21"
+  ],
+  "usd": 0.040216,
+  "wall_ms": 22329,
+  "http_calls": 13,
+  "tokens_in": 2402,
+  "tokens_out": 2452,
+  "wasted_ms": 1910,
+  "n_spans": 13
+ },
+ {
+  "tag": "F9_parcel_layer_empty",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {
+   "parcel": "empty"
+  },
+  "budget": null,
+  "use_llm": true,
+  "verdict": "无法判断",
+  "confidence": 0.0,
+  "checks": [
+   {
+    "name": "宗地全空时触发位置闸门",
+    "pass": true
+   },
+   {
+    "name": "不输出分区结论",
+    "pass": true
+   }
+  ],
+  "passed": 2,
+  "total": 2,
+  "fms": [
+   "FM-08",
+   "FM-09",
+   "FM-21"
+  ],
+  "usd": 0.014152,
+  "wall_ms": 9752,
+  "http_calls": 7,
+  "tokens_in": 1229,
+  "tokens_out": 993,
+  "wasted_ms": 664,
+  "n_spans": 11
+ },
+ {
+  "tag": "R1_consistency_a",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   }
+  ],
+  "passed": 2,
+  "total": 2,
+  "fms": [
+   "FM-08",
+   "FM-12",
+   "FM-13",
+   "FM-14",
+   "FM-21"
+  ],
+  "usd": 0.038492,
+  "wall_ms": 20437,
+  "http_calls": 10,
+  "tokens_in": 2424,
+  "tokens_out": 2336,
+  "wasted_ms": 0,
+  "n_spans": 13
+ },
+ {
+  "tag": "R1_consistency_b",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {},
+  "budget": null,
+  "use_llm": true,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   }
+  ],
+  "passed": 2,
+  "total": 2,
+  "fms": [
+   "FM-08",
+   "FM-12",
+   "FM-13",
+   "FM-14",
+   "FM-21"
+  ],
+  "usd": 0.042996,
+  "wall_ms": 22778,
+  "http_calls": 10,
+  "tokens_in": 2347,
+  "tokens_out": 2713,
+  "wasted_ms": 0,
+  "n_spans": 13
+ },
+ {
+  "tag": "B0_no_llm_baseline",
+  "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+  "faults": {},
+  "budget": null,
+  "use_llm": false,
+  "verdict": "有条件可行",
+  "confidence": 0.7,
+  "checks": [
+   {
+    "name": "引用全部有效",
+    "pass": true
+   },
+   {
+    "name": "洪水未核实时不做否定结论",
+    "pass": true
+   }
+  ],
+  "passed": 2,
+  "total": 2,
+  "fms": [
+   "FM-08",
+   "FM-12",
+   "FM-13",
+   "FM-14",
+   "FM-21"
+  ],
+  "usd": 0.0,
+  "wall_ms": 1502,
+  "http_calls": 10,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "wasted_ms": 0,
+  "n_spans": 13
+ }
+]

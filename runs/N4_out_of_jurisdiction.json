@@ -1,0 +1,356 @@
+{
+ "run_id": "1f7a4706a1",
+ "question": "1 Judd Falls Rd, Ithaca 可以开餐厅吗？",
+ "faults": {},
+ "spans": [
+  {
+   "id": "s01",
+   "kind": "plan",
+   "name": "planner",
+   "args": {
+    "question": "1 Judd Falls Rd, Ithaca 可以开餐厅吗？",
+    "reserved_usd": 0.00353,
+    "model": "claude_haiku_4_5",
+    "llm_ms": 1929
+   },
+   "status": "ok",
+   "started": 1793120879.6413298,
+   "latency_ms": 1935,
+   "cost_usd": 0.0015119999999999999,
+   "tokens_in": 557,
+   "tokens_out": 191,
+   "http_calls": 0,
+   "summary": "LLM 生成计划",
+   "detail": {
+    "plan": {
+     "address": "1 Judd Falls Rd, Ithaca, NY",
+     "uses": [
+      "restaurant"
+     ],
+     "proposed": {
+      "stories": null,
+      "height_ft": null
+     },
+     "questions": [
+      "用途许可：该地址分区是否允许餐厅用途？",
+      "现状：是否已有建筑，还是空地？",
+      "改造/新建：是否涉及建筑体量变更？"
+     ],
+     "steps": [
+      "geocode",
+      "jurisdiction",
+      "snap_parcel",
+      "zoning",
+      "flood",
+      "transit",
+      "zoning_rules"
+     ],
+     "clarify": null
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s02",
+   "kind": "guard",
+   "name": "plan_repair",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120881.5769536,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "按策略强制加入 flood；按策略强制加入 transit",
+   "detail": {
+    "steps": [
+     "geocode",
+     "jurisdiction",
+     "snap_parcel",
+     "zoning",
+     "flood",
+     "transit",
+     "zoning_rules"
+    ]
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s03",
+   "kind": "tool",
+   "name": "geocode",
+   "args": {},
+   "status": "ok",
+   "started": 1793120881.5769901,
+   "latency_ms": 129,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "人口普查地理编码按门牌区间在街道中心线上插值，点位可能落在道路上",
+   "detail": {
+    "data": {
+     "lon": -76.470742529972,
+     "lat": 42.44925742499,
+     "matched": "1 JUDD FALLS RD, ITHACA, NY, 14850",
+     "precision": "street_range_interpolated",
+     "provider": "census"
+    },
+    "sources": [
+     {
+      "id": "census_geocoder",
+      "title": "US Census Geocoder (Public_AR_Current)",
+      "url": "https://geocoding.geo.census.gov/geocoder/",
+      "retrieved_at": "2026-10-27T17:08Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.7
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s04",
+   "kind": "tool",
+   "name": "jurisdiction",
+   "args": {},
+   "status": "ok",
+   "started": 1793120881.7062094,
+   "latency_ms": 178,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "点位不在伊萨卡市（City）边界内——可能属于 Town of Ithaca 等其他辖区，分区规则完全不同",
+   "detail": {
+    "data": {
+     "in_city": false
+    },
+    "sources": [
+     {
+      "id": "coi_boundary",
+      "title": "City of Ithaca – Municipal Boundary (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Municipal_Boundary/FeatureServer",
+      "retrieved_at": "2026-10-27T17:08Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.9
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-10"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s05",
+   "kind": "guard",
+   "name": "scope_gate",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120881.8851893,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "超出辖区：停止调用 City 专属工具，避免用错规则集",
+   "detail": null,
+   "warnings": [],
+   "failure_modes": [
+    "FM-10"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s06",
+   "kind": "synth",
+   "name": "synthesizer",
+   "args": {
+    "reserved_usd": 0.06153,
+    "model": "claude_sonnet_5_5",
+    "llm_ms": 4999
+   },
+   "status": "ok",
+   "started": 1793120881.8852162,
+   "latency_ms": 5005,
+   "cost_usd": 0.010356,
+   "tokens_in": 597,
+   "tokens_out": 571,
+   "http_calls": 0,
+   "summary": "LLM 综合 · verdict=无法判断",
+   "detail": {
+    "output": {
+     "verdict": "无法判断",
+     "answer_md": "- **地址定位**：地理编码将该地址解析为 1 JUDD FALLS RD, ITHACA, NY, 14850。该点位是按门牌区间在街道中心线上插值得到的，可能落在道路上，不一定是实际地块位置 [E1]。\n- **辖区**：该点位不在伊萨卡市（City）边界内，可能属于 Town of Ithaca 等其他辖区，分区规则与市区完全不同 [E2]。所以不能套用伊萨卡市的分区规定来判断。\n- **分区与餐厅用途**：证据中没有该地块的分区类别、允许用途、是否需要特别许可或场地审查等信息，这些均未能核实。因此无法判断能否开餐厅，也不能据此推断可以或不可以。\n- **拟建规模**：用户未提供拟建层数和高度，因此无法与任何限制对照。\n- **建议下一步**：先确认该地块所属的具体辖区，再向该辖区的规划或分区部门查询该地块的分区和餐厅用途规定。",
+     "open_questions": [
+      "该地址所属的具体辖区（如 Town of Ithaca 或其他），需用地块级别的数据确认，因为当前点位是插值得到的",
+      "该地块的分区类别，以及该分区是否允许餐厅用途（as-of-right、特别许可或不允许）",
+      "是否需要场地规划审查、停车、排污、酒类许可或卫生许可等附加要求",
+      "拟建的层数、高度和面积，以便与分区限制核对",
+      "是否为现有建筑改造，以及现有用途是否合法"
+     ]
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s07",
+   "kind": "guard",
+   "name": "answer_guards",
+   "args": {},
+   "status": "ok",
+   "started": 1793120886.8904035,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "全部通过",
+   "detail": {
+    "confidence_cap": 0.5,
+    "cited": [
+     "E1",
+     "E2"
+    ],
+    "ungrounded_numbers": []
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  }
+ ],
+ "ledger": {
+  "total_usd": 0.011868,
+  "wall_ms": 7249,
+  "http_calls": 2,
+  "llm_tokens_in": 1154,
+  "llm_tokens_out": 762,
+  "by_kind": {
+   "plan": {
+    "spans": 1,
+    "usd": 0.001512,
+    "ms": 1935,
+    "tokens_in": 557,
+    "tokens_out": 191,
+    "http": 0
+   },
+   "guard": {
+    "spans": 3,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "tool": {
+    "spans": 2,
+    "usd": 0.0,
+    "ms": 307,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 2
+   },
+   "synth": {
+    "spans": 1,
+    "usd": 0.010356,
+    "ms": 5005,
+    "tokens_in": 597,
+    "tokens_out": 571,
+    "http": 0
+   }
+  },
+  "wasted_usd_on_failed_spans": 0,
+  "ms_spent_on_failed_or_empty_tools": 0,
+  "budget": {
+   "max_usd": 0.15,
+   "max_tool_calls": 30,
+   "max_wall_s": 120.0
+  }
+ },
+ "result": {
+  "verdict": "无法判断",
+  "answer_md": "- **地址定位**：地理编码将该地址解析为 1 JUDD FALLS RD, ITHACA, NY, 14850。该点位是按门牌区间在街道中心线上插值得到的，可能落在道路上，不一定是实际地块位置 [E1]。\n- **辖区**：该点位不在伊萨卡市（City）边界内，可能属于 Town of Ithaca 等其他辖区，分区规则与市区完全不同 [E2]。所以不能套用伊萨卡市的分区规定来判断。\n- **分区与餐厅用途**：证据中没有该地块的分区类别、允许用途、是否需要特别许可或场地审查等信息，这些均未能核实。因此无法判断能否开餐厅，也不能据此推断可以或不可以。\n- **拟建规模**：用户未提供拟建层数和高度，因此无法与任何限制对照。\n- **建议下一步**：先确认该地块所属的具体辖区，再向该辖区的规划或分区部门查询该地块的分区和餐厅用途规定。",
+  "open_questions": [
+   "该地址所属的具体辖区（如 Town of Ithaca 或其他），需用地块级别的数据确认，因为当前点位是插值得到的",
+   "该地块的分区类别，以及该分区是否允许餐厅用途（as-of-right、特别许可或不允许）",
+   "是否需要场地规划审查、停车、排污、酒类许可或卫生许可等附加要求",
+   "拟建的层数、高度和面积，以便与分区限制核对",
+   "是否为现有建筑改造，以及现有用途是否合法"
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "kind": "location",
+    "text": "地理编码：1 JUDD FALLS RD, ITHACA, NY, 14850（人口普查地理编码按门牌区间在街道中心线上插值，点位可能落在道路上）",
+    "status": "ok",
+    "confidence": 0.7,
+    "source": {
+     "id": "census_geocoder",
+     "title": "US Census Geocoder (Public_AR_Current)",
+     "url": "https://geocoding.geo.census.gov/geocoder/",
+     "retrieved_at": "2026-10-27T17:08Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E2",
+    "kind": "jurisdiction",
+    "text": "点位不在伊萨卡市（City）边界内——可能属于 Town of Ithaca 等其他辖区，分区规则完全不同",
+    "status": "ok",
+    "confidence": 0.9,
+    "source": {
+     "id": "coi_boundary",
+     "title": "City of Ithaca – Municipal Boundary (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Municipal_Boundary/FeatureServer",
+     "retrieved_at": "2026-10-27T17:08Z",
+     "data_as_of": null
+    },
+    "failure_modes": [
+     "FM-10"
+    ]
+   }
+  ],
+  "confidence": 0.5,
+  "plan": {
+   "address": "1 Judd Falls Rd, Ithaca, NY",
+   "uses": [
+    "restaurant"
+   ],
+   "proposed": {
+    "stories": null,
+    "height_ft": null
+   },
+   "questions": [
+    "用途许可：该地址分区是否允许餐厅用途？",
+    "现状：是否已有建筑，还是空地？",
+    "改造/新建：是否涉及建筑体量变更？"
+   ],
+   "steps": [
+    "geocode",
+    "jurisdiction",
+    "snap_parcel",
+    "zoning",
+    "flood",
+    "transit",
+    "zoning_rules"
+   ],
+   "clarify": null
+  }
+ },
+ "failure_modes_triggered": [
+  "FM-10"
+ ],
+ "tag": "N4_out_of_jurisdiction"
+}

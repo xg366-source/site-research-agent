@@ -1,0 +1,294 @@
+{
+ "run_id": "6023e0f349",
+ "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+ "faults": {
+  "geocode": "http_429",
+  "geocode_fallback": "http_429"
+ },
+ "spans": [
+  {
+   "id": "s01",
+   "kind": "plan",
+   "name": "planner",
+   "args": {
+    "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+    "reserved_usd": 0.00354,
+    "model": "claude_haiku_4_5",
+    "llm_ms": 2638
+   },
+   "status": "ok",
+   "started": 1793120953.9631536,
+   "latency_ms": 2643,
+   "cost_usd": 0.00219,
+   "tokens_in": 580,
+   "tokens_out": 322,
+   "http_calls": 0,
+   "summary": "LLM 生成计划",
+   "detail": {
+    "plan": {
+     "address": "120 E State St, Ithaca, NY",
+     "uses": [
+      "restaurant",
+      "multifamily"
+     ],
+     "proposed": {
+      "stories": 6,
+      "height_ft": null
+     },
+     "questions": [
+      "用途许可：咖啡馆（餐饮）和混合住宅在该地块分区是否允许？",
+      "高度限制：6层建筑是否符合该地块的高度和体量指标？",
+      "公交可达性：周边TCAT站点覆盖情况如何？",
+      "洪水风险：该地块是否在FEMA洪水分区内？",
+      "历史保护：该地址是否在历史街区或有历史建筑保护约束？",
+      "宗地属性：该地块当前的所有权和可建性限制"
+     ],
+     "steps": [
+      "geocode",
+      "jurisdiction",
+      "snap_parcel",
+      "zoning",
+      "historic",
+      "flood",
+      "transit",
+      "zoning_rules",
+      "metrics"
+     ],
+     "clarify": null
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s02",
+   "kind": "guard",
+   "name": "plan_repair",
+   "args": {},
+   "status": "ok",
+   "started": 1793120956.6071563,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "计划合法，无需修复",
+   "detail": {
+    "steps": [
+     "geocode",
+     "jurisdiction",
+     "snap_parcel",
+     "zoning",
+     "historic",
+     "flood",
+     "transit",
+     "zoning_rules",
+     "metrics"
+    ]
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s03",
+   "kind": "tool",
+   "name": "geocode",
+   "args": {},
+   "status": "empty",
+   "started": 1793120956.6071901,
+   "latency_ms": 2000,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 3,
+   "summary": "两个地理编码器都没有结果（备用源：rate_limited）",
+   "detail": {
+    "data": {},
+    "sources": [],
+    "confidence": 0.0
+   },
+   "warnings": [
+    "attempt 1: rate_limited (injected 429)",
+    "attempt 2: rate_limited (injected 429)",
+    "census geocoder failed: rate_limited",
+    "attempt 1: rate_limited (injected 429)",
+    "nominatim fallback failed: rate_limited"
+   ],
+   "failure_modes": [
+    "FM-09",
+    "FM-03"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s04",
+   "kind": "synth",
+   "name": "synthesizer",
+   "args": {
+    "reserved_usd": 0.06127,
+    "model": "claude_sonnet_5_5",
+    "llm_ms": 5699
+   },
+   "status": "ok",
+   "started": 1793120958.607668,
+   "latency_ms": 5704,
+   "cost_usd": 0.01038,
+   "tokens_in": 495,
+   "tokens_out": 593,
+   "http_calls": 0,
+   "summary": "LLM 综合 · verdict=无法判断",
+   "detail": {
+    "output": {
+     "verdict": "无法判断",
+     "answer_md": "- **结论：目前无法判断该项目是否可行。** 现有证据仅有一条地理编码记录，且结果为空。\n- **地址未能核实**：对 120 E State St, Ithaca, NY 的地理编码没有返回结果，备用源也因限流而失败 [E1]。这属于查询失败，不能据此推断该地址不存在或不适合开发。\n- **分区与用途未能核实**：证据中没有该地块的分区、允许用途（咖啡馆/餐饮、多户住宅）等信息，因此无法判断混合用途是否被允许。\n- **6 层高度未能核实**：证据中没有高度、层数限制、容积率或退线等规定，无法判断 6 层方案是否冲突。您也未提供具体高度（英尺），这一项也需要补充。\n- **洪水、历史街区、市政配套等其他限制均未能核实**，不能视为不存在。\n- **建议**：先重试地理编码或手动确认地址和地块编号，然后查询当地分区规定、高度限制和相关审批要求，再重新评估。",
+     "open_questions": [
+      "确认地址 120 E State St, Ithaca, NY 的准确位置和地块编号（地理编码失败，备用源被限流，需重试或人工核对）",
+      "该地块的分区类别，以及该分区是否允许底层餐饮/咖啡馆与上层多户住宅的混合用途",
+      "该分区对建筑层数和高度的限制，6 层方案是否超限；并请提供拟建高度（英尺）",
+      "是否位于洪水区、历史街区或其他特殊管控区域",
+      "停车、退线、容积率等其他规划条件及所需审批流程"
+     ]
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s05",
+   "kind": "guard",
+   "name": "answer_guards",
+   "args": {},
+   "status": "ok",
+   "started": 1793120964.3123558,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "全部通过",
+   "detail": {
+    "confidence_cap": 0.0,
+    "cited": [
+     "E1"
+    ],
+    "ungrounded_numbers": []
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  }
+ ],
+ "ledger": {
+  "total_usd": 0.01257,
+  "wall_ms": 10349,
+  "http_calls": 3,
+  "llm_tokens_in": 1075,
+  "llm_tokens_out": 915,
+  "by_kind": {
+   "plan": {
+    "spans": 1,
+    "usd": 0.00219,
+    "ms": 2643,
+    "tokens_in": 580,
+    "tokens_out": 322,
+    "http": 0
+   },
+   "guard": {
+    "spans": 2,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "tool": {
+    "spans": 1,
+    "usd": 0.0,
+    "ms": 2000,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 3
+   },
+   "synth": {
+    "spans": 1,
+    "usd": 0.01038,
+    "ms": 5704,
+    "tokens_in": 495,
+    "tokens_out": 593,
+    "http": 0
+   }
+  },
+  "wasted_usd_on_failed_spans": 0,
+  "ms_spent_on_failed_or_empty_tools": 2000,
+  "budget": {
+   "max_usd": 0.15,
+   "max_tool_calls": 30,
+   "max_wall_s": 120.0
+  }
+ },
+ "result": {
+  "verdict": "无法判断",
+  "answer_md": "- **结论：目前无法判断该项目是否可行。** 现有证据仅有一条地理编码记录，且结果为空。\n- **地址未能核实**：对 120 E State St, Ithaca, NY 的地理编码没有返回结果，备用源也因限流而失败 [E1]。这属于查询失败，不能据此推断该地址不存在或不适合开发。\n- **分区与用途未能核实**：证据中没有该地块的分区、允许用途（咖啡馆/餐饮、多户住宅）等信息，因此无法判断混合用途是否被允许。\n- **6 层高度未能核实**：证据中没有高度、层数限制、容积率或退线等规定，无法判断 6 层方案是否冲突。您也未提供具体高度（英尺），这一项也需要补充。\n- **洪水、历史街区、市政配套等其他限制均未能核实**，不能视为不存在。\n- **建议**：先重试地理编码或手动确认地址和地块编号，然后查询当地分区规定、高度限制和相关审批要求，再重新评估。",
+  "open_questions": [
+   "确认地址 120 E State St, Ithaca, NY 的准确位置和地块编号（地理编码失败，备用源被限流，需重试或人工核对）",
+   "该地块的分区类别，以及该分区是否允许底层餐饮/咖啡馆与上层多户住宅的混合用途",
+   "该分区对建筑层数和高度的限制，6 层方案是否超限；并请提供拟建高度（英尺）",
+   "是否位于洪水区、历史街区或其他特殊管控区域",
+   "停车、退线、容积率等其他规划条件及所需审批流程"
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "kind": "location",
+    "text": "地理编码：无结果（两个地理编码器都没有结果（备用源：rate_limited））",
+    "status": "empty",
+    "confidence": 0.0,
+    "source": null,
+    "failure_modes": [
+     "FM-09",
+     "FM-03"
+    ]
+   }
+  ],
+  "confidence": 0.0,
+  "plan": {
+   "address": "120 E State St, Ithaca, NY",
+   "uses": [
+    "restaurant",
+    "multifamily"
+   ],
+   "proposed": {
+    "stories": 6,
+    "height_ft": null
+   },
+   "questions": [
+    "用途许可：咖啡馆（餐饮）和混合住宅在该地块分区是否允许？",
+    "高度限制：6层建筑是否符合该地块的高度和体量指标？",
+    "公交可达性：周边TCAT站点覆盖情况如何？",
+    "洪水风险：该地块是否在FEMA洪水分区内？",
+    "历史保护：该地址是否在历史街区或有历史建筑保护约束？",
+    "宗地属性：该地块当前的所有权和可建性限制"
+   ],
+   "steps": [
+    "geocode",
+    "jurisdiction",
+    "snap_parcel",
+    "zoning",
+    "historic",
+    "flood",
+    "transit",
+    "zoning_rules",
+    "metrics"
+   ],
+   "clarify": null
+  }
+ },
+ "failure_modes_triggered": [
+  "FM-03",
+  "FM-09"
+ ],
+ "tag": "F2_geocoders_rate_limited"
+}

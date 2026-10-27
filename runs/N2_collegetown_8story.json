@@ -1,0 +1,1007 @@
+{
+ "run_id": "81bc4baa4d",
+ "question": "113 Dryden Rd, Ithaca 能不能建一栋 8 层学生公寓？公交怎么样？",
+ "faults": {},
+ "spans": [
+  {
+   "id": "s01",
+   "kind": "plan",
+   "name": "planner",
+   "args": {
+    "question": "113 Dryden Rd, Ithaca 能不能建一栋 8 层学生公寓？公交怎么样？",
+    "reserved_usd": 0.00353,
+    "model": "claude_haiku_4_5",
+    "llm_ms": 1980
+   },
+   "status": "ok",
+   "started": 1793120838.6844087,
+   "latency_ms": 1985,
+   "cost_usd": 0.001741,
+   "tokens_in": 571,
+   "tokens_out": 234,
+   "http_calls": 0,
+   "summary": "LLM 生成计划",
+   "detail": {
+    "plan": {
+     "address": "113 Dryden Rd, Ithaca, NY",
+     "uses": [
+      "multifamily"
+     ],
+     "proposed": {
+      "stories": 8,
+      "height_ft": null
+     },
+     "questions": [
+      "分区许可多户住宅用途吗？",
+      "8层是否超过高度限制？",
+      "宗地面积是否满足容积率要求？",
+      "400/800米内公交覆盖情况？",
+      "是否在洪水区/历史街区内？"
+     ],
+     "steps": [
+      "geocode",
+      "jurisdiction",
+      "snap_parcel",
+      "zoning",
+      "historic",
+      "flood",
+      "transit",
+      "zoning_rules",
+      "metrics"
+     ],
+     "clarify": null
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s02",
+   "kind": "guard",
+   "name": "plan_repair",
+   "args": {},
+   "status": "ok",
+   "started": 1793120840.6703289,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "计划合法，无需修复",
+   "detail": {
+    "steps": [
+     "geocode",
+     "jurisdiction",
+     "snap_parcel",
+     "zoning",
+     "historic",
+     "flood",
+     "transit",
+     "zoning_rules",
+     "metrics"
+    ]
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s03",
+   "kind": "tool",
+   "name": "geocode",
+   "args": {},
+   "status": "ok",
+   "started": 1793120840.6703715,
+   "latency_ms": 135,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "人口普查地理编码按门牌区间在街道中心线上插值，点位可能落在道路上",
+   "detail": {
+    "data": {
+     "lon": -76.48532585183,
+     "lat": 42.441555384497,
+     "matched": "113 DRYDEN RD, ITHACA, NY, 14850",
+     "precision": "street_range_interpolated",
+     "provider": "census"
+    },
+    "sources": [
+     {
+      "id": "census_geocoder",
+      "title": "US Census Geocoder (Public_AR_Current)",
+      "url": "https://geocoding.geo.census.gov/geocoder/",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.7
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s04",
+   "kind": "tool",
+   "name": "jurisdiction",
+   "args": {},
+   "status": "ok",
+   "started": 1793120840.8058636,
+   "latency_ms": 123,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "ok",
+   "detail": {
+    "data": {
+     "in_city": true
+    },
+    "sources": [
+     {
+      "id": "coi_boundary",
+      "title": "City of Ithaca – Municipal Boundary (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Municipal_Boundary/FeatureServer",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.95
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s05",
+   "kind": "tool",
+   "name": "snap_parcel",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120840.9289925,
+   "latency_ms": 446,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 4,
+   "summary": "35 米内有 11 个宗地，但没有一个门牌号与输入匹配；拒绝随便选一个",
+   "detail": {
+    "data": {
+     "candidates": [
+      "400-404 COLLEGE AVE",
+      "325 COLLEGE AVE",
+      "401 COLLEGE AVE",
+      "323 COLLEGE AVE",
+      "403 COLLEGE AVE",
+      "406-10 COLLEGE AVE"
+     ]
+    },
+    "sources": [
+     {
+      "id": "coi_parcels",
+      "title": "City of Ithaca – Tax Parcels (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": "2025-06-23"
+     }
+    ],
+    "confidence": 0.3
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-08",
+    "FM-21"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s06",
+   "kind": "fallback",
+   "name": "snap_parcel → parcel_by_address",
+   "args": {},
+   "status": "ok",
+   "started": 1793120841.3753984,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "空间吸附失败，切换到属性反查",
+   "detail": null,
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s07",
+   "kind": "tool",
+   "name": "parcel_by_address",
+   "args": {},
+   "status": "ok",
+   "started": 1793120841.3754094,
+   "latency_ms": 325,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "空间吸附失败，改用宗地属性表按地址反查成功；地理编码点距宗地中心 107 米（偏差过大：若直接用原始点位，下游所有空间查询都会错）",
+   "detail": {
+    "data": {
+     "parcel": {
+      "PRINTKEY": "63.-6-4",
+      "LOCADDR": "113 DRYDEN RD",
+      "PrimaryZone": "MU-2",
+      "SecZones": null,
+      "OverlayZone": null,
+      "CALCACRES": 0.535077189983,
+      "Shape__Area": 3979.0234375,
+      "PROPCLASS": "Commercial",
+      "DESCRIPTIO": "Apartment",
+      "FZONE": "NO",
+      "FIRMPANEL": "0001B",
+      "HISTPROP": "NO",
+      "ILPCREVIEW": "NO"
+     },
+     "centroid": [
+      -76.48661080022167,
+      42.44139986564578
+     ],
+     "snap_radius_m": null,
+     "geocode_offset_m": 107,
+     "lot_area_sqft": 42830
+    },
+    "sources": [
+     {
+      "id": "coi_parcels",
+      "title": "City of Ithaca – Tax Parcels (ArcGIS) · 属性反查",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.85
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-08",
+    "FM-21"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s08",
+   "kind": "tool",
+   "name": "zoning",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120841.7011552,
+   "latency_ms": 146,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 2,
+   "summary": "分区图层最后编辑于 2024-09-26，晚于此后的分区修订可能未反映",
+   "detail": {
+    "data": {
+     "base_zones": [
+      "MU-2"
+     ],
+     "overlays": [],
+     "overlay_desc": [],
+     "layer_zones": [
+      "MU-2"
+     ],
+     "parcel_zone_attr": [
+      "MU-2"
+     ]
+    },
+    "sources": [
+     {
+      "id": "coi_zoning",
+      "title": "City of Ithaca – City Zoning layer (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/City_Zoning/FeatureServer",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": "2024-09-26"
+     }
+    ],
+    "confidence": 0.8
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-14"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s09",
+   "kind": "tool",
+   "name": "historic",
+   "args": {},
+   "status": "ok",
+   "started": 1793120841.8478396,
+   "latency_ms": 269,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "该点未命中历史街区图层（不排除单体历史建筑，见宗地 HISTPROP 字段）",
+   "detail": {
+    "data": {
+     "districts": []
+    },
+    "sources": [
+     {
+      "id": "coi_historic",
+      "title": "City of Ithaca – Historic Districts (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Historic_Districts/FeatureServer",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.75
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s10",
+   "kind": "tool",
+   "name": "flood",
+   "args": {},
+   "status": "ok",
+   "started": 1793120842.117471,
+   "latency_ms": 283,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "FEMA 有效洪水分区 X AREA OF MINIMAL FLOOD HAZARD",
+   "detail": {
+    "data": {
+     "zone": "X",
+     "subtype": "AREA OF MINIMAL FLOOD HAZARD",
+     "sfha": "F",
+     "chain": [
+      "FEMA NFHL: 成功"
+     ],
+     "legacy_parcel_flag": "NO"
+    },
+    "sources": [
+     {
+      "id": "fema_nfhl",
+      "title": "FEMA National Flood Hazard Layer (effective)",
+      "url": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.95
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s11",
+   "kind": "tool",
+   "name": "transit",
+   "args": {},
+   "status": "ok",
+   "started": 1793120842.4007244,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "步行距离 = 直线距离 × 1.3 绕行系数（近似，非路网计算）；GTFS 将于 2026-12-19 到期，需要刷新",
+   "detail": {
+    "data": {
+     "nearest": [
+      {
+       "name": "Collegetown Crossing",
+       "walk_m": 191,
+       "routes": [
+        "30",
+        "51",
+        "90"
+       ],
+       "weekday_trips": 108
+      },
+      {
+       "name": "Schwartz Performing Arts Center",
+       "walk_m": 216,
+       "routes": [
+        "30",
+        "51",
+        "81",
+        "90",
+        "92"
+       ],
+       "weekday_trips": 133
+      },
+      {
+       "name": "College @ Oak",
+       "walk_m": 230,
+       "routes": [
+        "30",
+        "51",
+        "90"
+       ],
+       "weekday_trips": 108
+      },
+      {
+       "name": "Oak @ College",
+       "walk_m": 259,
+       "routes": [
+        "82"
+       ],
+       "weekday_trips": 36
+      },
+      {
+       "name": "Catherine Commons",
+       "walk_m": 277,
+       "routes": [
+        "30",
+        "51",
+        "90"
+       ],
+       "weekday_trips": 104
+      }
+     ],
+     "stops_400m": 9,
+     "routes_400m": [
+      "10",
+      "20",
+      "21",
+      "30",
+      "31",
+      "36",
+      "40",
+      "43",
+      "51",
+      "52",
+      "65",
+      "67",
+      "81",
+      "82",
+      "90",
+      "92"
+     ],
+     "weekday_stop_events_400m": 705,
+     "stops_800m": 22
+    },
+    "sources": [
+     {
+      "id": "tcat_gtfs",
+      "title": "TCAT GTFS（有效期 20260922–20261219）",
+      "url": "https://s3.amazonaws.com/tcat-gtfs/tcat-ny-us.zip",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": "20260922"
+     }
+    ],
+    "confidence": 0.85
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s12",
+   "kind": "tool",
+   "name": "zoning_rules[MU-2]",
+   "args": {},
+   "status": "ok",
+   "started": 1793120842.4014084,
+   "latency_ms": 28,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "Collegetown 为形态准则分区（§325-45），图表外还有立面/激活要求",
+   "detail": {
+    "data": {
+     "zone": "MU-2",
+     "uses": {
+      "multifamily": {
+       "value": "•",
+       "footnote": null,
+       "page": 12,
+       "row": "Multiple family dwelling",
+       "aligned": true,
+       "raw": "Multiple family dwelling 2 - - • • • •"
+      }
+     },
+     "bulk": {
+      "max_stories": {
+       "value": "8",
+       "footnote": null,
+       "page": 13,
+       "row": "Number of stories",
+       "aligned": true,
+       "raw": "Number of stories 3 3 3 4 7 8"
+      },
+      "max_height_ft": {
+       "value": "85",
+       "footnote": null,
+       "page": 13,
+       "row": "Height in feet",
+       "aligned": true,
+       "raw": "Height in feet 35 35 35 45 75 85"
+      },
+      "max_lot_coverage": {
+       "value": "100",
+       "footnote": null,
+       "page": 13,
+       "row": "Percent of lot area",
+       "aligned": true,
+       "raw": "Percent of lot area 30 35 40 50 70 100"
+      }
+     },
+     "citations": [
+      "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=12",
+      "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=13",
+      "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=13",
+      "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=13"
+     ],
+     "currency": {
+      "doc": "Zoning Charts April 2026",
+      "warning": "市政府已发布分区条例全面重写 RFP，计划废止并替换 Chapter 325；结论需以申请时有效版本为准",
+      "rfp": "https://www.cityofithacany.gov/DocumentCenter/View/20155/Zoning-Rewrite-RFP_Final?bidId=223"
+     }
+    },
+    "sources": [
+     {
+      "id": "chart_2026",
+      "title": "City of Ithaca Zoning Charts (April 2026)",
+      "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": "2026-04"
+     },
+     {
+      "id": "rfp",
+      "title": "City of Ithaca – Zoning Code Update RFP",
+      "url": "https://www.cityofithacany.gov/DocumentCenter/View/20155/Zoning-Rewrite-RFP_Final?bidId=223",
+      "retrieved_at": "2026-10-27T17:07Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.9
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s13",
+   "kind": "compute",
+   "name": "metrics",
+   "args": {},
+   "status": "ok",
+   "started": 1793120842.430262,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "确定性计算（不经过 LLM）",
+   "detail": {
+    "metrics": [
+     {
+      "lot_area_sqft": 42830,
+      "envelope_gfa_sqft": 342640,
+      "envelope_formula": "宗地面积 42830 × 覆盖率 100% × 8 层",
+      "transit_score": 47,
+      "transit_score_formula": "min(100, 400 米内站点工作日停靠班次 / 15)"
+     }
+    ]
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s14",
+   "kind": "synth",
+   "name": "synthesizer",
+   "args": {
+    "reserved_usd": 0.06489,
+    "model": "claude_sonnet_5_5",
+    "llm_ms": 15246
+   },
+   "status": "ok",
+   "started": 1793120842.430364,
+   "latency_ms": 15251,
+   "cost_usd": 0.036231,
+   "tokens_in": 1737,
+   "tokens_out": 2068,
+   "http_calls": 0,
+   "summary": "LLM 综合 · verdict=有条件可行",
+   "detail": {
+    "output": {
+     "verdict": "有条件可行",
+     "answer_md": "**一、结论：有条件可行。** 按现有分区图表，8 层多户住宅在层数上刚好达到上限，但还有几项需要人工核实，见下文和 open_questions。\n\n**二、分区与用途**\n- 该地址位于 City of Ithaca 辖区内 [E2]。宗地为 113 DRYDEN RD（PRINTKEY 63.-6-4），面积约 42830 sqft，现状为 Commercial/Apartment [E3]。\n- 基础分区为 MU-2，无叠加区 [E4]。\n- MU-2 允许「Multiple family dwelling」用途 [E7]。\n- **“学生公寓”是否按多户住宅处理，未能核实。** 证据只覆盖多户住宅这一用途，没有涉及宿舍、学生公寓等单独的用途分类。\n\n**三、层数与高度**\n- MU-2 最大层数为 8 [E8]，你拟建 8 层，正好在上限，没有余量，也与证据不冲突。\n- 最大高度为 85 英尺 [E9]。你的方案未给出高度（height_ft 为空），所以 8 层是否满足 85 英尺限制，未能核实。层高、屋顶设备等会影响结果。\n- 最大建筑覆盖率为 100% [E10]。按宗地面积、覆盖率和 8 层粗算，理论建筑面积上限约 342640 sqft [E13]。这只是理论值，未计入立面、退让、激活等其他要求，不能当作可建规模。\n- Collegetown 为形态准则分区（§325-45），图表之外还有立面和激活要求 [E11]。这些要求未在证据中展开，未能核实。\n\n**四、场地风险**\n- FEMA 有效洪水分区为 X（最小洪水风险区）[E6]。\n- 该点未命中历史街区图层 [E5]。但这不排除单体历史建筑，需查宗地的 HISTPROP 字段，该字段内容未能核实 [E5]。\n- 地理编码点距宗地中心 107 米，偏差较大，宗地是通过地址反查属性表确定的 [E3]。点位本身可能落在道路上 [E1]。因此，凡是基于原始点位的结论，都应以宗地为准复核。\n\n**五、公交**\n- 400 米步行范围内有 9 个站点、16 条线路，工作日停靠 705 班次 [E14]。\n- 最近站点为 Collegetown Crossing（191 米）、Schwartz Performing Arts Center（216 米）和 College @ Oak（230 米）[E14]。\n- 公交评分为 47（满分 100）[E14]。该分数按 400 米内站点工作日停靠班次折算，上限 100 [E14]。\n- 步行距离是直线距离乘 1.3 的绕行系数，只是近似值，不是路网计算 [E14]。GTFS 数据将于 2026-12-19 到期，需要刷新 [E14]。\n\n**六、时效性**\n- 分区图层最后编辑于 2024-09-26，之后的分区修订可能未反映，数据状态为 degraded [E4]。\n- 市政府已发布分区条例全面重写的 RFP，计划废止并替换 Chapter 325，结论需以申请时有效版本为准 [E12]。",
+     "open_questions": [
+      "“学生公寓”在 Ithaca 分区条例中是否属于「Multiple family dwelling」，还是宿舍等其他用途，是否需要额外审批",
+      "拟建 8 层的实际总高度是否不超过 85 英尺（需设计层高和屋顶设备高度）",
+      "Collegetown 形态准则（§325-45）的立面、激活、退让等图表外要求如何影响 8 层方案",
+      "宗地 HISTPROP 字段是否标注历史建筑，现有建筑拆除或改造是否受限",
+      "分区图层编辑日期之后是否有分区修订，Chapter 325 重写进度及过渡条款",
+      "以宗地而非地理编码点复核所有空间查询结果（点位与宗地中心相差 107 米）",
+      "用路网实际计算站点步行距离，并在 GTFS 刷新后复核公交班次和评分"
+     ]
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s15",
+   "kind": "guard",
+   "name": "answer_guards",
+   "args": {},
+   "status": "ok",
+   "started": 1793120857.68193,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "全部通过",
+   "detail": {
+    "confidence_cap": 0.7,
+    "cited": [
+     "E1",
+     "E2",
+     "E3",
+     "E4",
+     "E5",
+     "E6",
+     "E7",
+     "E8",
+     "E9",
+     "E10",
+     "E11",
+     "E12",
+     "E13",
+     "E14"
+    ],
+    "ungrounded_numbers": []
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  }
+ ],
+ "ledger": {
+  "total_usd": 0.037972,
+  "wall_ms": 18998,
+  "http_calls": 11,
+  "llm_tokens_in": 2308,
+  "llm_tokens_out": 2302,
+  "by_kind": {
+   "plan": {
+    "spans": 1,
+    "usd": 0.001741,
+    "ms": 1985,
+    "tokens_in": 571,
+    "tokens_out": 234,
+    "http": 0
+   },
+   "guard": {
+    "spans": 2,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "tool": {
+    "spans": 9,
+    "usd": 0.0,
+    "ms": 1755,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 11
+   },
+   "fallback": {
+    "spans": 1,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "compute": {
+    "spans": 1,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "synth": {
+    "spans": 1,
+    "usd": 0.036231,
+    "ms": 15251,
+    "tokens_in": 1737,
+    "tokens_out": 2068,
+    "http": 0
+   }
+  },
+  "wasted_usd_on_failed_spans": 0,
+  "ms_spent_on_failed_or_empty_tools": 0,
+  "budget": {
+   "max_usd": 0.15,
+   "max_tool_calls": 30,
+   "max_wall_s": 120.0
+  }
+ },
+ "result": {
+  "verdict": "有条件可行",
+  "answer_md": "**一、结论：有条件可行。** 按现有分区图表，8 层多户住宅在层数上刚好达到上限，但还有几项需要人工核实，见下文和 open_questions。\n\n**二、分区与用途**\n- 该地址位于 City of Ithaca 辖区内 [E2]。宗地为 113 DRYDEN RD（PRINTKEY 63.-6-4），面积约 42830 sqft，现状为 Commercial/Apartment [E3]。\n- 基础分区为 MU-2，无叠加区 [E4]。\n- MU-2 允许「Multiple family dwelling」用途 [E7]。\n- **“学生公寓”是否按多户住宅处理，未能核实。** 证据只覆盖多户住宅这一用途，没有涉及宿舍、学生公寓等单独的用途分类。\n\n**三、层数与高度**\n- MU-2 最大层数为 8 [E8]，你拟建 8 层，正好在上限，没有余量，也与证据不冲突。\n- 最大高度为 85 英尺 [E9]。你的方案未给出高度（height_ft 为空），所以 8 层是否满足 85 英尺限制，未能核实。层高、屋顶设备等会影响结果。\n- 最大建筑覆盖率为 100% [E10]。按宗地面积、覆盖率和 8 层粗算，理论建筑面积上限约 342640 sqft [E13]。这只是理论值，未计入立面、退让、激活等其他要求，不能当作可建规模。\n- Collegetown 为形态准则分区（§325-45），图表之外还有立面和激活要求 [E11]。这些要求未在证据中展开，未能核实。\n\n**四、场地风险**\n- FEMA 有效洪水分区为 X（最小洪水风险区）[E6]。\n- 该点未命中历史街区图层 [E5]。但这不排除单体历史建筑，需查宗地的 HISTPROP 字段，该字段内容未能核实 [E5]。\n- 地理编码点距宗地中心 107 米，偏差较大，宗地是通过地址反查属性表确定的 [E3]。点位本身可能落在道路上 [E1]。因此，凡是基于原始点位的结论，都应以宗地为准复核。\n\n**五、公交**\n- 400 米步行范围内有 9 个站点、16 条线路，工作日停靠 705 班次 [E14]。\n- 最近站点为 Collegetown Crossing（191 米）、Schwartz Performing Arts Center（216 米）和 College @ Oak（230 米）[E14]。\n- 公交评分为 47（满分 100）[E14]。该分数按 400 米内站点工作日停靠班次折算，上限 100 [E14]。\n- 步行距离是直线距离乘 1.3 的绕行系数，只是近似值，不是路网计算 [E14]。GTFS 数据将于 2026-12-19 到期，需要刷新 [E14]。\n\n**六、时效性**\n- 分区图层最后编辑于 2024-09-26，之后的分区修订可能未反映，数据状态为 degraded [E4]。\n- 市政府已发布分区条例全面重写的 RFP，计划废止并替换 Chapter 325，结论需以申请时有效版本为准 [E12]。",
+  "open_questions": [
+   "“学生公寓”在 Ithaca 分区条例中是否属于「Multiple family dwelling」，还是宿舍等其他用途，是否需要额外审批",
+   "拟建 8 层的实际总高度是否不超过 85 英尺（需设计层高和屋顶设备高度）",
+   "Collegetown 形态准则（§325-45）的立面、激活、退让等图表外要求如何影响 8 层方案",
+   "宗地 HISTPROP 字段是否标注历史建筑，现有建筑拆除或改造是否受限",
+   "分区图层编辑日期之后是否有分区修订，Chapter 325 重写进度及过渡条款",
+   "以宗地而非地理编码点复核所有空间查询结果（点位与宗地中心相差 107 米）",
+   "用路网实际计算站点步行距离，并在 GTFS 刷新后复核公交班次和评分"
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "kind": "location",
+    "text": "地理编码：113 DRYDEN RD, ITHACA, NY, 14850（人口普查地理编码按门牌区间在街道中心线上插值，点位可能落在道路上）",
+    "status": "ok",
+    "confidence": 0.7,
+    "source": {
+     "id": "census_geocoder",
+     "title": "US Census Geocoder (Public_AR_Current)",
+     "url": "https://geocoding.geo.census.gov/geocoder/",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E2",
+    "kind": "jurisdiction",
+    "text": "位于 City of Ithaca 辖区内",
+    "status": "ok",
+    "confidence": 0.95,
+    "source": {
+     "id": "coi_boundary",
+     "title": "City of Ithaca – Municipal Boundary (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Municipal_Boundary/FeatureServer",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E3",
+    "kind": "parcel",
+    "text": "宗地 113 DRYDEN RD（PRINTKEY 63.-6-4），面积约 42830 sqft，现状 Commercial/Apartment；空间吸附失败，改用宗地属性表按地址反查成功；地理编码点距宗地中心 107 米（偏差过大：若直接用原始点位，下游所有空间查询都会错）",
+    "status": "ok",
+    "confidence": 0.85,
+    "source": {
+     "id": "coi_parcels",
+     "title": "City of Ithaca – Tax Parcels (ArcGIS) · 属性反查",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": null
+    },
+    "failure_modes": [
+     "FM-08",
+     "FM-21"
+    ]
+   },
+   {
+    "id": "E4",
+    "kind": "zoning",
+    "text": "基础分区 ['MU-2']，叠加区 [] []；分区图层最后编辑于 2024-09-26，晚于此后的分区修订可能未反映",
+    "status": "degraded",
+    "confidence": 0.8,
+    "source": {
+     "id": "coi_zoning",
+     "title": "City of Ithaca – City Zoning layer (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/City_Zoning/FeatureServer",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": "2024-09-26"
+    },
+    "failure_modes": [
+     "FM-14"
+    ]
+   },
+   {
+    "id": "E5",
+    "kind": "historic",
+    "text": "该点未命中历史街区图层（不排除单体历史建筑，见宗地 HISTPROP 字段）",
+    "status": "ok",
+    "confidence": 0.75,
+    "source": {
+     "id": "coi_historic",
+     "title": "City of Ithaca – Historic Districts (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Historic_Districts/FeatureServer",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E6",
+    "kind": "flood",
+    "text": "FEMA 有效洪水分区 X AREA OF MINIMAL FLOOD HAZARD（查询链：FEMA NFHL: 成功）",
+    "status": "ok",
+    "confidence": 0.95,
+    "source": {
+     "id": "fema_nfhl",
+     "title": "FEMA National Flood Hazard Layer (effective)",
+     "url": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E7",
+    "kind": "rule",
+    "text": "MU-2 用途「Multiple family dwelling」：允许（图表第 12 页）",
+    "status": "ok",
+    "confidence": 0.9,
+    "source": {
+     "id": "chart_2026",
+     "title": "City of Ithaca Zoning Charts (April 2026)",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=12",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": "2026-04"
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E8",
+    "kind": "rule",
+    "text": "MU-2 最大层数：8（图表第 13 页，Number of stories）",
+    "status": "ok",
+    "confidence": 0.9,
+    "source": {
+     "id": "chart_2026",
+     "title": "City of Ithaca Zoning Charts (April 2026)",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=13",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": "2026-04"
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E9",
+    "kind": "rule",
+    "text": "MU-2 最大高度：85（图表第 13 页，Height in feet）",
+    "status": "ok",
+    "confidence": 0.9,
+    "source": {
+     "id": "chart_2026",
+     "title": "City of Ithaca Zoning Charts (April 2026)",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=13",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": "2026-04"
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E10",
+    "kind": "rule",
+    "text": "MU-2 最大建筑覆盖率：100（图表第 13 页，Percent of lot area）",
+    "status": "ok",
+    "confidence": 0.9,
+    "source": {
+     "id": "chart_2026",
+     "title": "City of Ithaca Zoning Charts (April 2026)",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=13",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": "2026-04"
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E11",
+    "kind": "rule_note",
+    "text": "MU-2 解析备注：Collegetown 为形态准则分区（§325-45），图表外还有立面/激活要求",
+    "status": "ok",
+    "confidence": 0.9,
+    "source": {
+     "id": "rfp",
+     "title": "City of Ithaca – Zoning Code Update RFP",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20155/Zoning-Rewrite-RFP_Final?bidId=223",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E12",
+    "kind": "currency",
+    "text": "市政府已发布分区条例全面重写 RFP，计划废止并替换 Chapter 325；结论需以申请时有效版本为准",
+    "status": "ok",
+    "confidence": 0.9,
+    "source": {
+     "id": "rfp",
+     "title": "City of Ithaca – Zoning Code Update RFP",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20155/Zoning-Rewrite-RFP_Final?bidId=223",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E13",
+    "kind": "metric",
+    "text": "理论可建建筑面积上限约 342640 sqft（宗地面积 42830 × 覆盖率 100% × 8 层）",
+    "status": "ok",
+    "confidence": 0.6,
+    "source": {
+     "id": "compute",
+     "title": "Agent 确定性计算",
+     "url": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E14",
+    "kind": "transit",
+    "text": "400 米步行内 9 个站点、16 条线路、工作日停靠 705 班次；最近站点 [('Collegetown Crossing', 191), ('Schwartz Performing Arts Center', 216), ('College @ Oak', 230)]；公交评分 47（min(100, 400 米内站点工作日停靠班次 / 15)）；步行距离 = 直线距离 × 1.3 绕行系数（近似，非路网计算）；GTFS 将于 2026-12-19 到期，需要刷新",
+    "status": "ok",
+    "confidence": 0.85,
+    "source": {
+     "id": "tcat_gtfs",
+     "title": "TCAT GTFS（有效期 20260922–20261219）",
+     "url": "https://s3.amazonaws.com/tcat-gtfs/tcat-ny-us.zip",
+     "retrieved_at": "2026-10-27T17:07Z",
+     "data_as_of": "20260922"
+    },
+    "failure_modes": []
+   }
+  ],
+  "confidence": 0.7,
+  "plan": {
+   "address": "113 Dryden Rd, Ithaca, NY",
+   "uses": [
+    "multifamily"
+   ],
+   "proposed": {
+    "stories": 8,
+    "height_ft": null
+   },
+   "questions": [
+    "分区许可多户住宅用途吗？",
+    "8层是否超过高度限制？",
+    "宗地面积是否满足容积率要求？",
+    "400/800米内公交覆盖情况？",
+    "是否在洪水区/历史街区内？"
+   ],
+   "steps": [
+    "geocode",
+    "jurisdiction",
+    "snap_parcel",
+    "zoning",
+    "historic",
+    "flood",
+    "transit",
+    "zoning_rules",
+    "metrics"
+   ],
+   "clarify": null
+  }
+ },
+ "failure_modes_triggered": [
+  "FM-08",
+  "FM-14",
+  "FM-21"
+ ],
+ "tag": "N2_collegetown_8story"
+}

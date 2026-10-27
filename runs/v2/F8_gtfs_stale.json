@@ -1,0 +1,910 @@
+{
+ "run_id": "c71de00543",
+ "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+ "faults": {
+  "transit": "stale"
+ },
+ "spans": [
+  {
+   "id": "s01",
+   "kind": "plan",
+   "name": "planner",
+   "args": {
+    "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+    "reserved_usd": 0.00354,
+    "model": "claude_haiku_4_5",
+    "llm_ms": 2438
+   },
+   "status": "ok",
+   "started": 1793120697.0369177,
+   "latency_ms": 2443,
+   "cost_usd": 0.001885,
+   "tokens_in": 580,
+   "tokens_out": 261,
+   "http_calls": 0,
+   "summary": "LLM 生成计划",
+   "detail": {
+    "plan": {
+     "address": "120 E State St, Ithaca, NY",
+     "uses": [
+      "restaurant"
+     ],
+     "proposed": {
+      "stories": 6,
+      "height_ft": null
+     },
+     "questions": [
+      "分区许可用途：底层餐饮 + 上层用途",
+      "高度限制与体量指标",
+      "是否在历史街区内的设计管制",
+      "公交便利性评估"
+     ],
+     "steps": [
+      "geocode",
+      "jurisdiction",
+      "snap_parcel",
+      "zoning",
+      "historic",
+      "flood",
+      "transit",
+      "zoning_rules",
+      "metrics"
+     ],
+     "clarify": "上层 5 层计划用于什么用途？（办公 office / 住宅 multifamily / 酒店 hotel / 零售 retail）需要明确后才能完整评估分区许可。"
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s02",
+   "kind": "guard",
+   "name": "plan_repair",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120699.480845,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "按策略强制加入 flood",
+   "detail": {
+    "steps": [
+     "geocode",
+     "jurisdiction",
+     "snap_parcel",
+     "zoning",
+     "historic",
+     "flood",
+     "transit",
+     "zoning_rules",
+     "metrics"
+    ]
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s03",
+   "kind": "tool",
+   "name": "geocode",
+   "args": {},
+   "status": "ok",
+   "started": 1793120699.480871,
+   "latency_ms": 154,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "人口普查地理编码按门牌区间在街道中心线上插值，点位可能落在道路上",
+   "detail": {
+    "data": {
+     "lon": -76.498526755288,
+     "lat": 42.439608855649,
+     "matched": "120 E STATE ST, ITHACA, NY, 14850",
+     "precision": "street_range_interpolated",
+     "provider": "census"
+    },
+    "sources": [
+     {
+      "id": "census_geocoder",
+      "title": "US Census Geocoder (Public_AR_Current)",
+      "url": "https://geocoding.geo.census.gov/geocoder/",
+      "retrieved_at": "2026-10-27T17:04Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.7
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s04",
+   "kind": "tool",
+   "name": "jurisdiction",
+   "args": {},
+   "status": "ok",
+   "started": 1793120699.6353908,
+   "latency_ms": 350,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "ok",
+   "detail": {
+    "data": {
+     "in_city": true
+    },
+    "sources": [
+     {
+      "id": "coi_boundary",
+      "title": "City of Ithaca – Municipal Boundary (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Municipal_Boundary/FeatureServer",
+      "retrieved_at": "2026-10-27T17:04Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.95
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s05",
+   "kind": "tool",
+   "name": "snap_parcel",
+   "args": {},
+   "status": "ok",
+   "started": 1793120699.985406,
+   "latency_ms": 523,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 4,
+   "summary": "原始点位落在道路上，已在 35 米半径内按门牌号吸附到宗地",
+   "detail": {
+    "data": {
+     "parcel": {
+      "PRINTKEY": "70.-2-29",
+      "LOCADDR": "120 STATE ST E",
+      "PrimaryZone": "CBD-60",
+      "SecZones": null,
+      "OverlayZone": "SLAUOZ",
+      "CALCACRES": 0.134836794069,
+      "Shape__Area": 1002.6484375,
+      "PROPCLASS": "Commercial",
+      "DESCRIPTIO": "Att row bldg",
+      "FZONE": "YES",
+      "FIRMPANEL": "0003B",
+      "HISTPROP": "YES",
+      "ILPCREVIEW": "NR"
+     },
+     "centroid": [
+      -76.49826332713786,
+      42.43993937820524
+     ],
+     "snap_radius_m": 35,
+     "lot_area_sqft": 10792
+    },
+    "sources": [
+     {
+      "id": "coi_parcels",
+      "title": "City of Ithaca – Tax Parcels (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+      "retrieved_at": "2026-10-27T17:05Z",
+      "data_as_of": "2025-06-23"
+     }
+    ],
+    "confidence": 0.85
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-08"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s06",
+   "kind": "tool",
+   "name": "zoning",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120700.5089025,
+   "latency_ms": 181,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 2,
+   "summary": "分区图层最后编辑于 2024-09-26，晚于此后的分区修订可能未反映",
+   "detail": {
+    "data": {
+     "base_zones": [
+      "CBD-60"
+     ],
+     "overlays": [
+      "SLAUOZ"
+     ],
+     "overlay_desc": [
+      "街道层活跃用途叠加区 (§325-8(D)(3))"
+     ],
+     "layer_zones": [
+      "CBD-60",
+      "SLAUOZ"
+     ],
+     "parcel_zone_attr": [
+      "CBD-60"
+     ]
+    },
+    "sources": [
+     {
+      "id": "coi_zoning",
+      "title": "City of Ithaca – City Zoning layer (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/City_Zoning/FeatureServer",
+      "retrieved_at": "2026-10-27T17:05Z",
+      "data_as_of": "2024-09-26"
+     }
+    ],
+    "confidence": 0.8
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-14"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s07",
+   "kind": "tool",
+   "name": "historic",
+   "args": {},
+   "status": "ok",
+   "started": 1793120700.6900938,
+   "latency_ms": 157,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "位于历史街区：外立面/新建需经 ILPC（地标保护委员会）审查",
+   "detail": {
+    "data": {
+     "districts": [
+      {
+       "DISTRICT": "Ithaca Downtown",
+       "DESIGNATION": "National"
+      }
+     ]
+    },
+    "sources": [
+     {
+      "id": "coi_historic",
+      "title": "City of Ithaca – Historic Districts (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Historic_Districts/FeatureServer",
+      "retrieved_at": "2026-10-27T17:05Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.9
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s08",
+   "kind": "tool",
+   "name": "flood",
+   "args": {},
+   "status": "unverified",
+   "started": 1793120700.847483,
+   "latency_ms": 1910,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 4,
+   "summary": "无法从权威源确认洪水分区。空结果≠不在洪水区：镜像在伊萨卡无覆盖，宗地字段基于 1980 年代旧图。需在 FEMA FIRM Viewer 人工核对。",
+   "detail": {
+    "data": {
+     "zone": null,
+     "legacy_parcel_flag": {
+      "FZONE": "YES",
+      "FIRMPANEL": "0003B"
+     },
+     "chain": [
+      "FEMA NFHL: network",
+      "Esri 镜像: 该点为空 → 做覆盖度探测",
+      "覆盖度探测: 周边约 10km×9km 内要素数 = 0",
+      "宗地属性 FZONE=YES（引用旧版 FIRM 面板 0003B）"
+     ]
+    },
+    "sources": [
+     {
+      "id": "esri_flood",
+      "title": "Esri Living Atlas – USA Flood Hazard Areas (mirror)",
+      "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Flood_Hazard_Reduced_Set_gdb/FeatureServer",
+      "retrieved_at": "2026-10-27T17:05Z",
+      "data_as_of": null
+     },
+     {
+      "id": "tompkins_flood",
+      "title": "Tompkins County – Flood Information（新版 FIRM 于 2025-06-18 生效）",
+      "url": "https://www.tompkinscountyny.gov/Government-Resources/Flood-Information",
+      "retrieved_at": "2026-10-27T17:05Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.2
+   },
+   "warnings": [
+    "attempt 1: network (connection error: HTTPSConnectionPool(host='hazards.fema.gov', port=443): Max retries exceeded wit)",
+    "attempt 2: network (connection error: HTTPSConnectionPool(host='hazards.fema.gov', port=443): Max retries exceeded wit)"
+   ],
+   "failure_modes": [
+    "FM-01",
+    "FM-02",
+    "FM-04",
+    "FM-14"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s09",
+   "kind": "tool",
+   "name": "transit",
+   "args": {},
+   "status": "error",
+   "started": 1793120702.7579865,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "tool exception KeyError: 'feed'",
+   "detail": {
+    "data": {},
+    "sources": [],
+    "confidence": 0.0
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-21"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s10",
+   "kind": "tool",
+   "name": "zoning_rules[CBD-60]",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120702.758011,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "CBD 列最大层数单元格为「-4」，疑似抽取噪声，已丢弃",
+   "detail": {
+    "data": {
+     "zone": "CBD-60",
+     "uses": {
+      "restaurant": {
+       "value": "•",
+       "footnote": null,
+       "page": 4,
+       "row": "Restaurant, fast food",
+       "aligned": true,
+       "raw": "Restaurant, fast food establishment, tavern - - • • - • • •"
+      }
+     },
+     "bulk": {
+      "max_stories": {
+       "value": null,
+       "footnote": null,
+       "page": 5,
+       "row": "Number of stories",
+       "aligned": false,
+       "raw": "Number of stories 4 6 4 - 4 4 -4"
+      },
+      "max_height_ft": {
+       "value": "60 ft",
+       "page": 5,
+       "row": "Note (5): 高度=分区后缀",
+       "aligned": true,
+       "raw": "Each of the CBD sub-districts have a maximum building height that corresponds with its suffix",
+       "table_cell": "see note"
+      },
+      "max_lot_coverage": {
+       "value": "100%",
+       "footnote": "8",
+       "page": 5,
+       "row": "Percent of lot area",
+       "aligned": true,
+       "raw": "Percent of lot area 50% 90% 50% 7 75% 50% 50% 100% 8"
+      }
+     },
+     "citations": [
+      "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=4",
+      "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=5",
+      "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=5",
+      "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=5"
+     ],
+     "currency": {
+      "doc": "Zoning Charts April 2026",
+      "warning": "市政府已发布分区条例全面重写 RFP，计划废止并替换 Chapter 325；结论需以申请时有效版本为准",
+      "rfp": "https://www.cityofithacany.gov/DocumentCenter/View/20155/Zoning-Rewrite-RFP_Final?bidId=223"
+     }
+    },
+    "sources": [
+     {
+      "id": "chart_2026",
+      "title": "City of Ithaca Zoning Charts (April 2026)",
+      "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=",
+      "retrieved_at": "2026-10-27T17:05Z",
+      "data_as_of": "2026-04"
+     },
+     {
+      "id": "rfp",
+      "title": "City of Ithaca – Zoning Code Update RFP",
+      "url": "https://www.cityofithacany.gov/DocumentCenter/View/20155/Zoning-Rewrite-RFP_Final?bidId=223",
+      "retrieved_at": "2026-10-27T17:05Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.9
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-13"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s11",
+   "kind": "compute",
+   "name": "metrics",
+   "args": {},
+   "status": "ok",
+   "started": 1793120702.7583306,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "确定性计算（不经过 LLM）",
+   "detail": {
+    "metrics": [
+     {
+      "lot_area_sqft": 10792,
+      "stories_estimated_from_height": 5,
+      "envelope_gfa_sqft": 53960,
+      "envelope_formula": "宗地面积 10792 × 覆盖率 100% × 5 层"
+     }
+    ]
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s12",
+   "kind": "synth",
+   "name": "synthesizer",
+   "args": {
+    "reserved_usd": 0.06502,
+    "model": "claude_sonnet_5_5",
+    "llm_ms": 16601
+   },
+   "status": "ok",
+   "started": 1793120702.758414,
+   "latency_ms": 16607,
+   "cost_usd": 0.038331,
+   "tokens_in": 1822,
+   "tokens_out": 2191,
+   "http_calls": 0,
+   "summary": "LLM 综合 · verdict=有条件可行",
+   "detail": {
+    "output": {
+     "verdict": "有条件可行",
+     "answer_md": "**结论：有条件可行。底层开咖啡馆的方向没有发现冲突，但 6 层方案很可能超出高度上限，需要调整或核实。**\n\n**1. 位置与宗地**\n- 地址位于 City of Ithaca 辖区内 [E2]。地理编码点落在道路上，已按门牌号吸附到宗地 [E3]。\n- 宗地编号 70.-2-29，面积约 10792 sqft，现状为 Commercial/Att row bldg [E3]。\n\n**2. 分区与用途**\n- 基础分区为 CBD-60，并叠加街道层活跃用途叠加区 SLAUOZ（§325-8(D)(3)）[E4]。分区图层最后编辑于 2024-09-26，之后的修订可能未反映 [E4]。\n- CBD-60 中「Restaurant, fast food」为允许用途 [E8]。\n- 你的咖啡馆是否归入该用途类别，未能核实。\n- 上层混合用途（如住宅或办公）是否允许，未能核实，本次证据未覆盖。\n- SLAUOZ 对底层用途的具体要求，未能核实。证据只给出了叠加区名称 [E4]。\n\n**3. 层数与高度（与你的方案有冲突风险）**\n- CBD-60 最大高度为 60 ft [E10]，最大建筑覆盖率为 100% [E11]。\n- 按 12 ft 层高估算，该宗地约可建 5 层（估算值）[E14]。你计划的 6 层很可能超出 60 ft 限高，除非层高明显压缩。\n- 条例中的最大层数没有可靠值，抽取失败，仅作待核实 [E9][E12]。\n- 按 100% 覆盖率和 5 层估算，理论建筑面积上限约 53960 sqft [E14]。这只是估算，不是审批结论。\n\n**4. 历史保护（重要的审批风险）**\n- 宗地位于 Ithaca Downtown 国家级历史街区，新建或外立面改动需经 ILPC 审查 [E5]。\n- 宗地本身登记为历史建筑（HISTPROP=YES）[E6]。\n- 对现有建筑的拆除或改造能否获批，证据未给出，未能核实。\n\n**5. 洪水风险**\n- 洪水分区未能核实。权威数据源无法确认，镜像在该地区无覆盖，宗地字段基于旧图 [E7]。\n- 该证据置信度低，只能作待核实 [E7]。不能据此认为不在洪水区。\n\n**6. 规则时效**\n- 市政府已发布分区条例全面重写的 RFP，计划废止并替换 Chapter 325。最终结论需以申请时有效的版本为准 [E13]。\n\n**建议**\n- 先把方案调整到 60 ft 以内（约 5 层），或向规划部门确认是否有额外高度或退台的规定。\n- 尽早与 ILPC 沟通。",
+     "open_questions": [
+      "CBD-60 的最大层数是否有明确规定（条例图表第 5 页解析失败，需人工核对原文）",
+      "6 层方案的实际建筑高度能否控制在 60 ft 以内，层高与女儿墙、屋顶设备是否计入高度",
+      "咖啡馆在条例用途表中属于哪一类，是否允许；上层住宅或办公等混合用途是否允许",
+      "SLAUOZ 街道层活跃用途叠加区对底层用途、临街立面和比例的具体要求",
+      "ILPC 对该历史建筑宗地的拆除、改建和新建的审查要求与可行性",
+      "官方 FEMA FIRM Viewer 上的洪水分区（现有结果未能核实）",
+      "分区条例重写进度，以及申请时适用的版本",
+      "2024-09-26 之后分区图层或条例是否有修订"
+     ]
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s13",
+   "kind": "guard",
+   "name": "answer_guards",
+   "args": {},
+   "status": "ok",
+   "started": 1793120719.3658412,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "全部通过",
+   "detail": {
+    "confidence_cap": 0.7,
+    "cited": [
+     "E2",
+     "E3",
+     "E4",
+     "E5",
+     "E6",
+     "E7",
+     "E8",
+     "E9",
+     "E10",
+     "E11",
+     "E12",
+     "E13",
+     "E14"
+    ],
+    "ungrounded_numbers": []
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  }
+ ],
+ "ledger": {
+  "total_usd": 0.040216,
+  "wall_ms": 22329,
+  "http_calls": 13,
+  "llm_tokens_in": 2402,
+  "llm_tokens_out": 2452,
+  "by_kind": {
+   "plan": {
+    "spans": 1,
+    "usd": 0.001885,
+    "ms": 2443,
+    "tokens_in": 580,
+    "tokens_out": 261,
+    "http": 0
+   },
+   "guard": {
+    "spans": 2,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "tool": {
+    "spans": 8,
+    "usd": 0.0,
+    "ms": 3275,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 13
+   },
+   "compute": {
+    "spans": 1,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "synth": {
+    "spans": 1,
+    "usd": 0.038331,
+    "ms": 16607,
+    "tokens_in": 1822,
+    "tokens_out": 2191,
+    "http": 0
+   }
+  },
+  "wasted_usd_on_failed_spans": 0.0,
+  "ms_spent_on_failed_or_empty_tools": 1910,
+  "budget": {
+   "max_usd": 0.15,
+   "max_tool_calls": 30,
+   "max_wall_s": 120.0
+  }
+ },
+ "result": {
+  "verdict": "有条件可行",
+  "answer_md": "**结论：有条件可行。底层开咖啡馆的方向没有发现冲突，但 6 层方案很可能超出高度上限，需要调整或核实。**\n\n**1. 位置与宗地**\n- 地址位于 City of Ithaca 辖区内 [E2]。地理编码点落在道路上，已按门牌号吸附到宗地 [E3]。\n- 宗地编号 70.-2-29，面积约 10792 sqft，现状为 Commercial/Att row bldg [E3]。\n\n**2. 分区与用途**\n- 基础分区为 CBD-60，并叠加街道层活跃用途叠加区 SLAUOZ（§325-8(D)(3)）[E4]。分区图层最后编辑于 2024-09-26，之后的修订可能未反映 [E4]。\n- CBD-60 中「Restaurant, fast food」为允许用途 [E8]。\n- 你的咖啡馆是否归入该用途类别，未能核实。\n- 上层混合用途（如住宅或办公）是否允许，未能核实，本次证据未覆盖。\n- SLAUOZ 对底层用途的具体要求，未能核实。证据只给出了叠加区名称 [E4]。\n\n**3. 层数与高度（与你的方案有冲突风险）**\n- CBD-60 最大高度为 60 ft [E10]，最大建筑覆盖率为 100% [E11]。\n- 按 12 ft 层高估算，该宗地约可建 5 层（估算值）[E14]。你计划的 6 层很可能超出 60 ft 限高，除非层高明显压缩。\n- 条例中的最大层数没有可靠值，抽取失败，仅作待核实 [E9][E12]。\n- 按 100% 覆盖率和 5 层估算，理论建筑面积上限约 53960 sqft [E14]。这只是估算，不是审批结论。\n\n**4. 历史保护（重要的审批风险）**\n- 宗地位于 Ithaca Downtown 国家级历史街区，新建或外立面改动需经 ILPC 审查 [E5]。\n- 宗地本身登记为历史建筑（HISTPROP=YES）[E6]。\n- 对现有建筑的拆除或改造能否获批，证据未给出，未能核实。\n\n**5. 洪水风险**\n- 洪水分区未能核实。权威数据源无法确认，镜像在该地区无覆盖，宗地字段基于旧图 [E7]。\n- 该证据置信度低，只能作待核实 [E7]。不能据此认为不在洪水区。\n\n**6. 规则时效**\n- 市政府已发布分区条例全面重写的 RFP，计划废止并替换 Chapter 325。最终结论需以申请时有效的版本为准 [E13]。\n\n**建议**\n- 先把方案调整到 60 ft 以内（约 5 层），或向规划部门确认是否有额外高度或退台的规定。\n- 尽早与 ILPC 沟通。",
+  "open_questions": [
+   "CBD-60 的最大层数是否有明确规定（条例图表第 5 页解析失败，需人工核对原文）",
+   "6 层方案的实际建筑高度能否控制在 60 ft 以内，层高与女儿墙、屋顶设备是否计入高度",
+   "咖啡馆在条例用途表中属于哪一类，是否允许；上层住宅或办公等混合用途是否允许",
+   "SLAUOZ 街道层活跃用途叠加区对底层用途、临街立面和比例的具体要求",
+   "ILPC 对该历史建筑宗地的拆除、改建和新建的审查要求与可行性",
+   "官方 FEMA FIRM Viewer 上的洪水分区（现有结果未能核实）",
+   "分区条例重写进度，以及申请时适用的版本",
+   "2024-09-26 之后分区图层或条例是否有修订"
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "kind": "location",
+    "text": "地理编码：120 E STATE ST, ITHACA, NY, 14850（人口普查地理编码按门牌区间在街道中心线上插值，点位可能落在道路上）",
+    "status": "ok",
+    "confidence": 0.7,
+    "source": {
+     "id": "census_geocoder",
+     "title": "US Census Geocoder (Public_AR_Current)",
+     "url": "https://geocoding.geo.census.gov/geocoder/",
+     "retrieved_at": "2026-10-27T17:04Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E2",
+    "kind": "jurisdiction",
+    "text": "位于 City of Ithaca 辖区内",
+    "status": "ok",
+    "confidence": 0.95,
+    "source": {
+     "id": "coi_boundary",
+     "title": "City of Ithaca – Municipal Boundary (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Municipal_Boundary/FeatureServer",
+     "retrieved_at": "2026-10-27T17:04Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E3",
+    "kind": "parcel",
+    "text": "宗地 120 STATE ST E（PRINTKEY 70.-2-29），面积约 10792 sqft，现状 Commercial/Att row bldg；原始点位落在道路上，已在 35 米半径内按门牌号吸附到宗地",
+    "status": "ok",
+    "confidence": 0.85,
+    "source": {
+     "id": "coi_parcels",
+     "title": "City of Ithaca – Tax Parcels (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": "2025-06-23"
+    },
+    "failure_modes": [
+     "FM-08"
+    ]
+   },
+   {
+    "id": "E4",
+    "kind": "zoning",
+    "text": "基础分区 ['CBD-60']，叠加区 ['SLAUOZ'] ['街道层活跃用途叠加区 (§325-8(D)(3))']；分区图层最后编辑于 2024-09-26，晚于此后的分区修订可能未反映",
+    "status": "degraded",
+    "confidence": 0.8,
+    "source": {
+     "id": "coi_zoning",
+     "title": "City of Ithaca – City Zoning layer (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/City_Zoning/FeatureServer",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": "2024-09-26"
+    },
+    "failure_modes": [
+     "FM-14"
+    ]
+   },
+   {
+    "id": "E5",
+    "kind": "historic",
+    "text": "位于历史街区：外立面/新建需经 ILPC（地标保护委员会）审查：[{'DISTRICT': 'Ithaca Downtown', 'DESIGNATION': 'National'}]",
+    "status": "ok",
+    "confidence": 0.9,
+    "source": {
+     "id": "coi_historic",
+     "title": "City of Ithaca – Historic Districts (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Historic_Districts/FeatureServer",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E6",
+    "kind": "historic",
+    "text": "宗地属性 HISTPROP=YES：该宗地本身登记为历史建筑",
+    "status": "ok",
+    "confidence": 0.85,
+    "source": {
+     "id": "coi_parcels",
+     "title": "City of Ithaca – Tax Parcels (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": "2025-06-23"
+    },
+    "failure_modes": [
+     "FM-08"
+    ]
+   },
+   {
+    "id": "E7",
+    "kind": "flood",
+    "text": "无法从权威源确认洪水分区。空结果≠不在洪水区：镜像在伊萨卡无覆盖，宗地字段基于 1980 年代旧图。需在 FEMA FIRM Viewer 人工核对。（查询链：FEMA NFHL: network → Esri 镜像: 该点为空 → 做覆盖度探测 → 覆盖度探测: 周边约 10km×9km 内要素数 = 0 → 宗地属性 FZONE=YES（引用旧版 FIRM 面板 0003B））",
+    "status": "unverified",
+    "confidence": 0.2,
+    "source": {
+     "id": "tompkins_flood",
+     "title": "Tompkins County – Flood Information（新版 FIRM 于 2025-06-18 生效）",
+     "url": "https://www.tompkinscountyny.gov/Government-Resources/Flood-Information",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": null
+    },
+    "failure_modes": [
+     "FM-01",
+     "FM-02",
+     "FM-04",
+     "FM-14"
+    ]
+   },
+   {
+    "id": "E8",
+    "kind": "rule",
+    "text": "CBD-60 用途「Restaurant, fast food」：允许（图表第 4 页）",
+    "status": "degraded",
+    "confidence": 0.9,
+    "source": {
+     "id": "chart_2026",
+     "title": "City of Ithaca Zoning Charts (April 2026)",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=4",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": "2026-04"
+    },
+    "failure_modes": [
+     "FM-13"
+    ]
+   },
+   {
+    "id": "E9",
+    "kind": "rule",
+    "text": "CBD-60 最大层数：无可靠值（图表第 5 页，Number of stories，列对齐失败，未采用）",
+    "status": "degraded",
+    "confidence": 0.3,
+    "source": {
+     "id": "chart_2026",
+     "title": "City of Ithaca Zoning Charts (April 2026)",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=5",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": "2026-04"
+    },
+    "failure_modes": [
+     "FM-13"
+    ]
+   },
+   {
+    "id": "E10",
+    "kind": "rule",
+    "text": "CBD-60 最大高度：60 ft（图表第 5 页，Note (5): 高度=分区后缀）",
+    "status": "degraded",
+    "confidence": 0.9,
+    "source": {
+     "id": "chart_2026",
+     "title": "City of Ithaca Zoning Charts (April 2026)",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=5",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": "2026-04"
+    },
+    "failure_modes": [
+     "FM-13"
+    ]
+   },
+   {
+    "id": "E11",
+    "kind": "rule",
+    "text": "CBD-60 最大建筑覆盖率：100%（图表第 5 页，Percent of lot area）",
+    "status": "degraded",
+    "confidence": 0.9,
+    "source": {
+     "id": "chart_2026",
+     "title": "City of Ithaca Zoning Charts (April 2026)",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20523/COI-Zoning-Charts_0426?bidId=#page=5",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": "2026-04"
+    },
+    "failure_modes": [
+     "FM-13"
+    ]
+   },
+   {
+    "id": "E12",
+    "kind": "rule_note",
+    "text": "CBD-60 解析备注：CBD 列最大层数单元格为「-4」，疑似抽取噪声，已丢弃",
+    "status": "degraded",
+    "confidence": 0.9,
+    "source": {
+     "id": "rfp",
+     "title": "City of Ithaca – Zoning Code Update RFP",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20155/Zoning-Rewrite-RFP_Final?bidId=223",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": null
+    },
+    "failure_modes": [
+     "FM-13"
+    ]
+   },
+   {
+    "id": "E13",
+    "kind": "currency",
+    "text": "市政府已发布分区条例全面重写 RFP，计划废止并替换 Chapter 325；结论需以申请时有效版本为准",
+    "status": "degraded",
+    "confidence": 0.9,
+    "source": {
+     "id": "rfp",
+     "title": "City of Ithaca – Zoning Code Update RFP",
+     "url": "https://www.cityofithacany.gov/DocumentCenter/View/20155/Zoning-Rewrite-RFP_Final?bidId=223",
+     "retrieved_at": "2026-10-27T17:05Z",
+     "data_as_of": null
+    },
+    "failure_modes": [
+     "FM-13"
+    ]
+   },
+   {
+    "id": "E14",
+    "kind": "metric",
+    "text": "理论可建建筑面积上限约 53960 sqft（宗地面积 10792 × 覆盖率 100% × 5 层）；按 12 ft 层高估算约 5 层（估算）",
+    "status": "ok",
+    "confidence": 0.6,
+    "source": {
+     "id": "compute",
+     "title": "Agent 确定性计算",
+     "url": null
+    },
+    "failure_modes": []
+   }
+  ],
+  "confidence": 0.7,
+  "plan": {
+   "address": "120 E State St, Ithaca, NY",
+   "uses": [
+    "restaurant"
+   ],
+   "proposed": {
+    "stories": 6,
+    "height_ft": null
+   },
+   "questions": [
+    "分区许可用途：底层餐饮 + 上层用途",
+    "高度限制与体量指标",
+    "是否在历史街区内的设计管制",
+    "公交便利性评估"
+   ],
+   "steps": [
+    "geocode",
+    "jurisdiction",
+    "snap_parcel",
+    "zoning",
+    "historic",
+    "flood",
+    "transit",
+    "zoning_rules",
+    "metrics"
+   ],
+   "clarify": "上层 5 层计划用于什么用途？（办公 office / 住宅 multifamily / 酒店 hotel / 零售 retail）需要明确后才能完整评估分区许可。"
+  }
+ },
+ "failure_modes_triggered": [
+  "FM-01",
+  "FM-02",
+  "FM-04",
+  "FM-08",
+  "FM-13",
+  "FM-14",
+  "FM-21"
+ ],
+ "tag": "F8_gtfs_stale"
+}

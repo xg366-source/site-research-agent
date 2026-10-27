@@ -1,0 +1,88 @@
+{
+ "run_id": "6e4cb5025a",
+ "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？",
+ "faults": {},
+ "spans": [
+  {
+   "id": "s01",
+   "kind": "plan",
+   "name": "planner",
+   "args": {
+    "question": "我想在 120 E State St, Ithaca 盖一栋 6 层的混合用途楼，底层开咖啡馆，可行吗？"
+   },
+   "status": "ok",
+   "started": 1793121064.0471237,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "",
+   "detail": null,
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s02",
+   "kind": "guard",
+   "name": "budget_breaker",
+   "args": {},
+   "status": "error",
+   "started": 1793121064.0471566,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "预算熔断：pre-flight: spent 0.0000 + worst-case 0.0035 (claude_haiku_4_5) > cap 0.002；用已收集的证据输出模板答案（不再调用 LLM）",
+   "detail": null,
+   "warnings": [],
+   "failure_modes": [
+    "FM-20"
+   ],
+   "parent": null
+  }
+ ],
+ "ledger": {
+  "total_usd": 0.0,
+  "wall_ms": 0,
+  "http_calls": 0,
+  "llm_tokens_in": 0,
+  "llm_tokens_out": 0,
+  "by_kind": {
+   "plan": {
+    "spans": 1,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "guard": {
+    "spans": 1,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   }
+  },
+  "wasted_usd_on_failed_spans": 0.0,
+  "ms_spent_on_failed_or_empty_tools": 0,
+  "budget": {
+   "max_usd": 0.002,
+   "max_tool_calls": 30,
+   "max_wall_s": 120
+  }
+ },
+ "result": {
+  "verdict": "无法判断",
+  "answer_md": "本次调研触发预算上限（pre-flight: spent 0.0000 + worst-case 0.0035 (claude_haiku_4_5) > cap 0.002），已停止。",
+  "evidence": []
+ },
+ "failure_modes_triggered": [
+  "FM-20"
+ ],
+ "tag": "F7_budget_breaker"
+}

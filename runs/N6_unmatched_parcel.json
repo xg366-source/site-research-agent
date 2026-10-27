@@ -1,0 +1,616 @@
+{
+ "run_id": "c2e75906f2",
+ "question": "130 E Clinton St, Ithaca 开咖啡馆可以吗？",
+ "faults": {},
+ "spans": [
+  {
+   "id": "s01",
+   "kind": "plan",
+   "name": "planner",
+   "args": {
+    "question": "130 E Clinton St, Ithaca 开咖啡馆可以吗？",
+    "reserved_usd": 0.00353,
+    "model": "claude_haiku_4_5",
+    "llm_ms": 1757
+   },
+   "status": "ok",
+   "started": 1793120893.3868973,
+   "latency_ms": 1763,
+   "cost_usd": 0.001486,
+   "tokens_in": 556,
+   "tokens_out": 186,
+   "http_calls": 0,
+   "summary": "LLM 生成计划",
+   "detail": {
+    "plan": {
+     "address": "130 E Clinton St, Ithaca, NY",
+     "uses": [
+      "restaurant"
+     ],
+     "proposed": {
+      "stories": null,
+      "height_ft": null
+     },
+     "questions": [
+      "用途许可（咖啡馆作为餐饮用途是否允许）",
+      "现状分区及叠加区限制",
+      "是否在历史街区内需保护性审查"
+     ],
+     "steps": [
+      "geocode",
+      "jurisdiction",
+      "snap_parcel",
+      "zoning",
+      "historic",
+      "flood",
+      "transit",
+      "zoning_rules"
+     ],
+     "clarify": null
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s02",
+   "kind": "guard",
+   "name": "plan_repair",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120895.1507087,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "按策略强制加入 flood；按策略强制加入 transit",
+   "detail": {
+    "steps": [
+     "geocode",
+     "jurisdiction",
+     "snap_parcel",
+     "zoning",
+     "historic",
+     "flood",
+     "transit",
+     "zoning_rules"
+    ]
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s03",
+   "kind": "tool",
+   "name": "geocode",
+   "args": {},
+   "status": "ok",
+   "started": 1793120895.1507366,
+   "latency_ms": 131,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "人口普查地理编码按门牌区间在街道中心线上插值，点位可能落在道路上",
+   "detail": {
+    "data": {
+     "lon": -76.498279924277,
+     "lat": 42.436958292456,
+     "matched": "130 E CLINTON ST, ITHACA, NY, 14850",
+     "precision": "street_range_interpolated",
+     "provider": "census"
+    },
+    "sources": [
+     {
+      "id": "census_geocoder",
+      "title": "US Census Geocoder (Public_AR_Current)",
+      "url": "https://geocoding.geo.census.gov/geocoder/",
+      "retrieved_at": "2026-10-27T17:08Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.7
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s04",
+   "kind": "tool",
+   "name": "jurisdiction",
+   "args": {},
+   "status": "ok",
+   "started": 1793120895.2818668,
+   "latency_ms": 103,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "ok",
+   "detail": {
+    "data": {
+     "in_city": true
+    },
+    "sources": [
+     {
+      "id": "coi_boundary",
+      "title": "City of Ithaca – Municipal Boundary (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Municipal_Boundary/FeatureServer",
+      "retrieved_at": "2026-10-27T17:08Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.95
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s05",
+   "kind": "tool",
+   "name": "snap_parcel",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120895.385848,
+   "latency_ms": 386,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 4,
+   "summary": "35 米内有 9 个宗地，但没有一个门牌号与输入匹配；拒绝随便选一个",
+   "detail": {
+    "data": {
+     "candidates": [
+      "109 CLINTON ST E",
+      "105-07 CLINTON ST E",
+      "301 CAYUGA ST S",
+      "303 CAYUGA ST S",
+      "102 CLINTON ST E",
+      "121-35 CLINTON ST E"
+     ]
+    },
+    "sources": [
+     {
+      "id": "coi_parcels",
+      "title": "City of Ithaca – Tax Parcels (ArcGIS)",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+      "retrieved_at": "2026-10-27T17:08Z",
+      "data_as_of": "2025-06-23"
+     }
+    ],
+    "confidence": 0.3
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-08",
+    "FM-21"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s06",
+   "kind": "fallback",
+   "name": "snap_parcel → parcel_by_address",
+   "args": {},
+   "status": "ok",
+   "started": 1793120895.771972,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "空间吸附失败，切换到属性反查",
+   "detail": null,
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s07",
+   "kind": "tool",
+   "name": "parcel_by_address",
+   "args": {},
+   "status": "empty",
+   "started": 1793120895.7719815,
+   "latency_ms": 362,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 1,
+   "summary": "宗地表中没有 130 CLINTON ST E",
+   "detail": {
+    "data": {
+     "street_query": "CLINTON ST E"
+    },
+    "sources": [
+     {
+      "id": "coi_parcels",
+      "title": "City of Ithaca – Tax Parcels (ArcGIS) · 属性反查",
+      "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+      "retrieved_at": "2026-10-27T17:08Z",
+      "data_as_of": null
+     }
+    ],
+    "confidence": 0.0
+   },
+   "warnings": [],
+   "failure_modes": [
+    "FM-09"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s08",
+   "kind": "guard",
+   "name": "location_gate",
+   "args": {},
+   "status": "degraded",
+   "started": 1793120896.134955,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "无法可靠确定宗地 → 不做任何分区结论（防止级联错误）",
+   "detail": null,
+   "warnings": [],
+   "failure_modes": [
+    "FM-21"
+   ],
+   "parent": null
+  },
+  {
+   "id": "s09",
+   "kind": "tool",
+   "name": "transit",
+   "args": {},
+   "status": "ok",
+   "started": 1793120896.134969,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "步行距离 = 直线距离 × 1.3 绕行系数（近似，非路网计算）；GTFS 将于 2026-12-19 到期，需要刷新",
+   "detail": {
+    "data": {
+     "nearest": [
+      {
+       "name": "Ithaca Commons - Green St",
+       "walk_m": 247,
+       "routes": [
+        "11",
+        "115",
+        "13",
+        "14",
+        "15",
+        "17",
+        "20",
+        "21",
+        "30",
+        "31",
+        "32",
+        "37",
+        "40",
+        "43",
+        "51",
+        "52",
+        "65",
+        "67",
+        "90"
+       ],
+       "weekday_trips": 453
+      },
+      {
+       "name": "McGraw House",
+       "walk_m": 271,
+       "routes": [
+        "115",
+        "15"
+       ],
+       "weekday_trips": 13
+      },
+      {
+       "name": "McGraw House",
+       "walk_m": 282,
+       "routes": [
+        "115",
+        "15"
+       ],
+       "weekday_trips": 13
+      },
+      {
+       "name": "Ithaca Commons - Aurora St",
+       "walk_m": 443,
+       "routes": [
+        "11",
+        "115",
+        "65"
+       ],
+       "weekday_trips": 27
+      },
+      {
+       "name": "Clinton @ Fayette",
+       "walk_m": 445,
+       "routes": [
+        "115",
+        "15",
+        "67"
+       ],
+       "weekday_trips": 22
+      }
+     ],
+     "stops_400m": 3,
+     "routes_400m": [
+      "11",
+      "115",
+      "13",
+      "14",
+      "15",
+      "17",
+      "20",
+      "21",
+      "30",
+      "31",
+      "32",
+      "37",
+      "40",
+      "43",
+      "51",
+      "52",
+      "65",
+      "67",
+      "90"
+     ],
+     "weekday_stop_events_400m": 479,
+     "stops_800m": 25
+    },
+    "sources": [
+     {
+      "id": "tcat_gtfs",
+      "title": "TCAT GTFS（有效期 20260922–20261219）",
+      "url": "https://s3.amazonaws.com/tcat-gtfs/tcat-ny-us.zip",
+      "retrieved_at": "2026-10-27T17:08Z",
+      "data_as_of": "20260922"
+     }
+    ],
+    "confidence": 0.85
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s10",
+   "kind": "synth",
+   "name": "synthesizer",
+   "args": {
+    "reserved_usd": 0.06246,
+    "model": "claude_sonnet_5_5",
+    "llm_ms": 11620
+   },
+   "status": "ok",
+   "started": 1793120896.1356678,
+   "latency_ms": 11625,
+   "cost_usd": 0.024402,
+   "tokens_in": 894,
+   "tokens_out": 1448,
+   "http_calls": 0,
+   "summary": "LLM 综合 · verdict=无法判断",
+   "detail": {
+    "output": {
+     "verdict": "无法判断",
+     "answer_md": "- **结论**：现有证据只能确认地址位置、辖区和公交可达性，无法判断能否在此开咖啡馆。关键的宗地和用地分区（zoning）信息缺失。\n- **位置与辖区**：地址被地理编码到 130 E Clinton St, Ithaca, NY 14850。该点位由门牌区间在街道中心线上插值得出，可能落在道路上，精度有限 [E1]。该地址位于 City of Ithaca 辖区内 [E2]。\n- **宗地未能核实**：宗地表中没有 130 CLINTON ST E，无法确定对应宗地。附近的候选宗地有 109 CLINTON ST E、105-07 CLINTON ST E、102 CLINTON ST E、121-35 CLINTON ST E 等 [E3]。这是数据匹配失败，不能据此认为该地址不存在或不可用。\n- **用地分区与用途许可未能核实**：没有证据说明该地所属分区，也没有说明咖啡馆或餐饮用途是否被允许。因为宗地无法确定，分区查询无从进行 [E3]。\n- **公交可达性（较好）**：400 米步行范围内有 3 个站点、19 条线路，工作日停靠 479 班次 [E4]。最近站点是 Ithaca Commons - Green St（距离数值 247），其次是 McGraw House（271、282） [E4]。步行距离由直线距离乘 1.3 的绕行系数近似得出，并非路网计算；公交评分未能获得 [E4]。GTFS 数据将于 2026-12-19 到期，需要刷新 [E4]。\n- **层数/高度**：用户未提供拟建层数或高度，因此无法检查是否与限制冲突。\n- **其他未能核实的事项**：洪水分区、停车要求、历史街区限制等没有证据，均未能核实，不能推断为无问题。",
+     "open_questions": [
+      "确认 130 E Clinton St 对应的实际宗地，例如核对税务宗地编号，或判断是否属于 121-35 / 105-07 E Clinton St 等合并宗地",
+      "向 City of Ithaca 规划部门或查阅分区图，确认该宗地的 zoning 分区，以及咖啡馆（小型餐饮/零售）是否为许可、有条件许可或禁止用途",
+      "确认咖啡馆是否按餐厅用途处理，以及座位数、外摆、营业时间、噪音等附加要求",
+      "核查洪水分区、历史街区/地标限制、停车与装卸要求（本次均未能核实）",
+      "如涉及新建或改建，提供拟建层数和高度以便对照限制",
+      "刷新 GTFS 公交数据（将于 2026-12-19 到期），必要时用路网计算替代直线乘系数的步行距离"
+     ]
+    }
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  },
+  {
+   "id": "s11",
+   "kind": "guard",
+   "name": "answer_guards",
+   "args": {},
+   "status": "ok",
+   "started": 1793120907.7610378,
+   "latency_ms": 0,
+   "cost_usd": 0.0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "http_calls": 0,
+   "summary": "全部通过",
+   "detail": {
+    "confidence_cap": 0.0,
+    "cited": [
+     "E1",
+     "E2",
+     "E3",
+     "E4"
+    ],
+    "ungrounded_numbers": []
+   },
+   "warnings": [],
+   "failure_modes": [],
+   "parent": null
+  }
+ ],
+ "ledger": {
+  "total_usd": 0.025888,
+  "wall_ms": 14374,
+  "http_calls": 7,
+  "llm_tokens_in": 1450,
+  "llm_tokens_out": 1634,
+  "by_kind": {
+   "plan": {
+    "spans": 1,
+    "usd": 0.001486,
+    "ms": 1763,
+    "tokens_in": 556,
+    "tokens_out": 186,
+    "http": 0
+   },
+   "guard": {
+    "spans": 3,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "tool": {
+    "spans": 5,
+    "usd": 0.0,
+    "ms": 982,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 7
+   },
+   "fallback": {
+    "spans": 1,
+    "usd": 0.0,
+    "ms": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "http": 0
+   },
+   "synth": {
+    "spans": 1,
+    "usd": 0.024402,
+    "ms": 11625,
+    "tokens_in": 894,
+    "tokens_out": 1448,
+    "http": 0
+   }
+  },
+  "wasted_usd_on_failed_spans": 0,
+  "ms_spent_on_failed_or_empty_tools": 362,
+  "budget": {
+   "max_usd": 0.15,
+   "max_tool_calls": 30,
+   "max_wall_s": 120.0
+  }
+ },
+ "result": {
+  "verdict": "无法判断",
+  "answer_md": "- **结论**：现有证据只能确认地址位置、辖区和公交可达性，无法判断能否在此开咖啡馆。关键的宗地和用地分区（zoning）信息缺失。\n- **位置与辖区**：地址被地理编码到 130 E Clinton St, Ithaca, NY 14850。该点位由门牌区间在街道中心线上插值得出，可能落在道路上，精度有限 [E1]。该地址位于 City of Ithaca 辖区内 [E2]。\n- **宗地未能核实**：宗地表中没有 130 CLINTON ST E，无法确定对应宗地。附近的候选宗地有 109 CLINTON ST E、105-07 CLINTON ST E、102 CLINTON ST E、121-35 CLINTON ST E 等 [E3]。这是数据匹配失败，不能据此认为该地址不存在或不可用。\n- **用地分区与用途许可未能核实**：没有证据说明该地所属分区，也没有说明咖啡馆或餐饮用途是否被允许。因为宗地无法确定，分区查询无从进行 [E3]。\n- **公交可达性（较好）**：400 米步行范围内有 3 个站点、19 条线路，工作日停靠 479 班次 [E4]。最近站点是 Ithaca Commons - Green St（距离数值 247），其次是 McGraw House（271、282） [E4]。步行距离由直线距离乘 1.3 的绕行系数近似得出，并非路网计算；公交评分未能获得 [E4]。GTFS 数据将于 2026-12-19 到期，需要刷新 [E4]。\n- **层数/高度**：用户未提供拟建层数或高度，因此无法检查是否与限制冲突。\n- **其他未能核实的事项**：洪水分区、停车要求、历史街区限制等没有证据，均未能核实，不能推断为无问题。",
+  "open_questions": [
+   "确认 130 E Clinton St 对应的实际宗地，例如核对税务宗地编号，或判断是否属于 121-35 / 105-07 E Clinton St 等合并宗地",
+   "向 City of Ithaca 规划部门或查阅分区图，确认该宗地的 zoning 分区，以及咖啡馆（小型餐饮/零售）是否为许可、有条件许可或禁止用途",
+   "确认咖啡馆是否按餐厅用途处理，以及座位数、外摆、营业时间、噪音等附加要求",
+   "核查洪水分区、历史街区/地标限制、停车与装卸要求（本次均未能核实）",
+   "如涉及新建或改建，提供拟建层数和高度以便对照限制",
+   "刷新 GTFS 公交数据（将于 2026-12-19 到期），必要时用路网计算替代直线乘系数的步行距离"
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "kind": "location",
+    "text": "地理编码：130 E CLINTON ST, ITHACA, NY, 14850（人口普查地理编码按门牌区间在街道中心线上插值，点位可能落在道路上）",
+    "status": "ok",
+    "confidence": 0.7,
+    "source": {
+     "id": "census_geocoder",
+     "title": "US Census Geocoder (Public_AR_Current)",
+     "url": "https://geocoding.geo.census.gov/geocoder/",
+     "retrieved_at": "2026-10-27T17:08Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E2",
+    "kind": "jurisdiction",
+    "text": "位于 City of Ithaca 辖区内",
+    "status": "ok",
+    "confidence": 0.95,
+    "source": {
+     "id": "coi_boundary",
+     "title": "City of Ithaca – Municipal Boundary (ArcGIS)",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Municipal_Boundary/FeatureServer",
+     "retrieved_at": "2026-10-27T17:08Z",
+     "data_as_of": null
+    },
+    "failure_modes": []
+   },
+   {
+    "id": "E3",
+    "kind": "location",
+    "text": "无法确定宗地：宗地表中没有 130 CLINTON ST E；附近宗地候选：['109 CLINTON ST E', '105-07 CLINTON ST E', '301 CAYUGA ST S', '303 CAYUGA ST S', '102 CLINTON ST E', '121-35 CLINTON ST E']",
+    "status": "empty",
+    "confidence": 0.0,
+    "source": {
+     "id": "coi_parcels",
+     "title": "City of Ithaca – Tax Parcels (ArcGIS) · 属性反查",
+     "url": "https://services5.arcgis.com/R1JbITZvSQHJsl5r/arcgis/rest/services/Tax_Parcels/FeatureServer",
+     "retrieved_at": "2026-10-27T17:08Z",
+     "data_as_of": null
+    },
+    "failure_modes": [
+     "FM-09"
+    ]
+   },
+   {
+    "id": "E4",
+    "kind": "transit",
+    "text": "400 米步行内 3 个站点、19 条线路、工作日停靠 479 班次；最近站点 [('Ithaca Commons - Green St', 247), ('McGraw House', 271), ('McGraw House', 282)]；公交评分 None（None）；步行距离 = 直线距离 × 1.3 绕行系数（近似，非路网计算）；GTFS 将于 2026-12-19 到期，需要刷新",
+    "status": "ok",
+    "confidence": 0.85,
+    "source": {
+     "id": "tcat_gtfs",
+     "title": "TCAT GTFS（有效期 20260922–20261219）",
+     "url": "https://s3.amazonaws.com/tcat-gtfs/tcat-ny-us.zip",
+     "retrieved_at": "2026-10-27T17:08Z",
+     "data_as_of": "20260922"
+    },
+    "failure_modes": []
+   }
+  ],
+  "confidence": 0.0,
+  "plan": {
+   "address": "130 E Clinton St, Ithaca, NY",
+   "uses": [
+    "restaurant"
+   ],
+   "proposed": {
+    "stories": null,
+    "height_ft": null
+   },
+   "questions": [
+    "用途许可（咖啡馆作为餐饮用途是否允许）",
+    "现状分区及叠加区限制",
+    "是否在历史街区内需保护性审查"
+   ],
+   "steps": [
+    "geocode",
+    "jurisdiction",
+    "snap_parcel",
+    "zoning",
+    "historic",
+    "flood",
+    "transit",
+    "zoning_rules"
+   ],
+   "clarify": null
+  }
+ },
+ "failure_modes_triggered": [
+  "FM-08",
+  "FM-09",
+  "FM-21"
+ ],
+ "tag": "N6_unmatched_parcel"
+}
